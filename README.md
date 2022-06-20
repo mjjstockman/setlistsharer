@@ -15,6 +15,8 @@
    - [User Demographics](#User-Demographics)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
+   - [Database Design](#Database-design) ADD ERD AND EXPLANTION
+   - [Kanban](#Kanban) ADD LINK AND EXPLANATION
    - [Changes to the design throughout development](#Changes-to-the-design-throughout-development)
    - [Colour Scheme](#Colour-Scheme)
    - [Typography](#typography)
@@ -67,7 +69,7 @@ The target market are individuals who are wanting to find out more about the col
 
 | Small screens | Medium screens | Largescreens |
 | --------------| -------------- | ------------ |
-| <img  src="assets/images/readme/wireframe-small.jpg"  alt="Wireframe of small screen"> | <img  src="assets/images/readme/wireframe-medium.jpg"  alt="Wireframe of medium screen"> | <img  src="assets/images/readme/wireframe-large.jpg"  alt="Wireframe of large screen"> |
+| <img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of small screen"> | <img  src="assets/images/readme/wireframe-medium.jpg"  alt="Wireframe of medium screen"> | <img  src="assets/images/readme/wireframe-large.jpg"  alt="Wireframe of large screen"> |
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
