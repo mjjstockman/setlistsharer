@@ -70,7 +70,9 @@ The target market are individuals who are wanting to find out more about the col
 | Page | Small screens | Medium screens | Largescreens |
 | --------------| -------------- | ------------ |  ------------ |
 | Home |<img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of the home page on a small screen"> | ADD LINK | ADDLINK |
-| Setlist/detail |<img  src="docs/readme_images/wireframes/small/index/setlist_detail_author.jpg"  alt="Wireframe of the home page on a small screen"> | ADD LINK | ADDLINK |
+| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_author.jpg"  alt="Wireframe of the setlist detail page as author on a small screen"> | ADD LINK | ADDLINK |
+| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_not_author.jpg"  alt="Wireframe of the setlist add page on a small screen"> |  ADD LINK | ADDLINK |
+| Setlist/add |<img  src="docs/readme_images/wireframes/small/setlist_add/setlist_add.jpg"  alt="Wireframe of the setlist add page on a small screen"> | ADD LINK | ADDLINK |
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
