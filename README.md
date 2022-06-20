@@ -67,9 +67,10 @@ The target market are individuals who are wanting to find out more about the col
 
 ## Wireframes
 
-| Small screens | Medium screens | Largescreens |
-| --------------| -------------- | ------------ |
-| <img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of small screen"> | <img  src="assets/images/readme/wireframe-medium.jpg"  alt="Wireframe of medium screen"> | <img  src="assets/images/readme/wireframe-large.jpg"  alt="Wireframe of large screen"> |
+| Page | Small screens | Medium screens | Largescreens |
+| --------------| -------------- | ------------ |  ------------ |
+| Home |<img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of the home page on a small screen"> | ADD LINK | ADDLINK |
+| Setlist/detail |<img  src="docs/readme_images/wireframes/small/index/setlist_detail_author.jpg"  alt="Wireframe of the home page on a small screen"> | ADD LINK | ADDLINK |
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
