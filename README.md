@@ -55,13 +55,30 @@ The target market are individuals who are wanting to find out more about the col
 
 ## User Stories
 
-1. As a potential student, I want to quickly see what courses are offered, so I can see if they are of interest.
-
-2. As a potential student, I want to see some general "about" text, so I can confirm that I am on the correct site for my needs.
-
-3. As a potential student, I want to see facts and figures on student satisfaction, so I can gauge whether I want to enrol.
-
-4. As a potential student, I want to be able to contact the college, so that I can ask any questions I have.
+| Theme  | Epic | Related User Stories  | MOSCOW |Order | Completed |
+|--|--|--|--|--|--|
+| Account Management  |  Sign up |  #2 Sign up using username / password |  Must have  |1 |  No |
+| 									|   |  #3 Sign up using social media |  Should have | 20 | No |
+| 					| Sign in  |  #1  Log in using username / password | Must have | 2  | No |
+| 					| 			 | #4  Log in using social media | Should have | 21 | No |
+| 					| Log out  |  #5  Manual log out |   Must have | 3 | No |
+| 					| 		|  #6  Automatic log out  | Won't have | 22 | No |
+|  Admin 		| Initial set up |  #18  Populate database |  Must have |  4 |No |
+|  				| Displaying setlists |  #13  Approve / reject a setlist submission | Must have  | 11 |  No | 
+|  				| Displaying photos |  #14  Approve / reject a photo submission  | Could have | 18 |  No | 
+|  				| Add venues |  #22 Add venues to the database   |  Must have  | 5  | No | 
+|  				| Add gigs |  #17 Add gigs to the database   | Must have  | 6 | No | 
+|  				| Add songs |  #16  Add song to the database  | Must have  | 7  |  No | 
+|  				| Add releases |  #21  Add releases to the database | Must have  | 8 |  No |
+| Setlist  |  Create a setlist |  #8  Submit a setlist  | Must have  | 10 |  No |
+|  		|                               |  #19  Update setlist | Should have | 13 | No |  
+|  		|                               |  #20  Delete setlist | Should have | 14  | No   |
+|  		|    Interact with setlist         |  #9  Agree / disagree with a setlist |  Should have | 15 | No |  
+|  		|                               |  #10  View numbers agreeing or disagreeing with a setlist | Should have | 16 | No |  
+|  		|                               |  #11  Submit a photo of a gig | Could have | 17  | No |  
+|  		|                               |  #12  View a photo of a gig | Could have | 19  | No |  
+|  		|                               |  #15 View setlist | Must have  |  12 | No | 
+|  	         |                               |  #7  View gigs on homepage | Must have  | 9  | No   |
 
 [Back to top ⇧](#Hull-College)
 
