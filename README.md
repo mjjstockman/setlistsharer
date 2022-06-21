@@ -95,6 +95,9 @@ The target market are individuals who are wanting to find out more about the col
 
 [Back to top ⇧](#Hull-College)
 
+## Database Design
+<img  src="docs/readme_images/general/ERD.jpg"  alt="Entity Relationship Diagram">
+
 ## Changes to the design throughout development
 
 The original design was slightly different to the above wireframes. The following particulars were changed during implementation to better the user experience and aesthetics:
