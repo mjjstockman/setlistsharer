@@ -17,7 +17,7 @@ class Venue(models.Model):
 
 class Song(models.Model):
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True, null=True)
+    # slug = models.SlugField(max_length=200, unique=True, null=True)
 
     def __str__(self):
         return self.title
@@ -26,7 +26,7 @@ class Song(models.Model):
 class Release(models.Model):
     title = models.CharField(max_length=200)
     songs = models.ManyToManyField(Song, related_name="releases")
-    slug = models.SlugField(max_length=200, unique=True, null=True)
+    # slug = models.SlugField(max_length=200, unique=True, null=True)
 
     def __str__(self):
         return self.title
