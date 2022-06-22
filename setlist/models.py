@@ -16,7 +16,7 @@ class Venue(models.Model):
 
 
 class Song(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True, null=False)
     # slug = models.SlugField(max_length=200, unique=True, null=True)
 
     def __str__(self):
