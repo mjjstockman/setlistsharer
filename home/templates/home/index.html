@@ -2,5 +2,8 @@
 {% load static %}
 
 {% block content %}
-    INDEX!!!!
+    {{ gigs }}
+    {% for gig in gigs %}
+        {{ gig }}
+    {% endfor %}
 {% endblock %}
