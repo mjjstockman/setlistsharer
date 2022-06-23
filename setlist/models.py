@@ -32,23 +32,23 @@ class Release(models.Model):
         return self.title
 
 
-class Gig(models.Model):
-    date = models.DateField(auto_now_add=False, auto_now=False, blank=True,
-                            null=True)
-    venue = models.ForeignKey('setlist.Venue', on_delete=models.CASCADE,
-                              null=True)
-    featured_image = CloudinaryField('image', null=True, blank=True)
-    featured_image_status = models.IntegerField(choices=STATUS, default=0)
+# class Gig(models.Model):
+#     date = models.DateField(auto_now_add=False, auto_now=False, blank=True,
+#                             null=True)
+#     venue = models.ForeignKey('setlist.Venue', on_delete=models.CASCADE,
+#                               null=True)
+#     featured_image = CloudinaryField('image', null=True, blank=True)
+#     featured_image_status = models.IntegerField(choices=STATUS, default=0)
 
-    class Meta:
-        ordering = ['date']
+#     class Meta:
+#         ordering = ['date']
 
-    def __str__(self):
-        return f"{self.venue} in {self.venue.city} on {self.date}"
+#     def __str__(self):
+#         return f"{self.venue} in {self.venue.city} on {self.date}"
 
 
 class Setlist(models.Model):
-    gig = models.OneToOneField('Gig', related_name='setlist_gig',
+    gig = models.OneToOneField('home.Gig', related_name='setlist_gig',
                                on_delete=models.CASCADE, null=True)
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     song = models.ManyToManyField(Song)
