@@ -15,5 +15,5 @@ class Gig(models.Model):
     class Meta:
         ordering = ['date']
 
-    # def __str__(self):
-        # return f"{self.venue} in {self.venue.city} on {self.date}"
+    def __str__(self):
+        return f"{self.venue} in {self.venue.city} on {self.date}"
