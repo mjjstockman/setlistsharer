@@ -4,9 +4,11 @@ from django.shortcuts import render, redirect
 from .forms import SetlistForm
 
 
-def add(request):
+def add(request, pk):
+    gig = Gig.objects.get(id=pk)
     author = request.user
     initial = {
+        'gig': gig,
         'author': author,
     }
 
