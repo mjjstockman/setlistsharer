@@ -19,5 +19,3 @@ class SetlistEditForm(forms.ModelForm):
         widgets = {
             'gig': forms.HiddenInput(),
             }
-
-
