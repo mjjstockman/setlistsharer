@@ -6,3 +6,4 @@ admin.site.register(Song)
 admin.site.register(Release)
 # admin.site.register(Gig)
 admin.site.register(Setlist)
+

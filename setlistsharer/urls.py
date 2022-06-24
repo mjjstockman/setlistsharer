@@ -18,7 +18,6 @@ from django.urls import path, include
 # from home.views import gigs
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
@@ -26,3 +25,4 @@ urlpatterns = [
     path('setlist/', include('setlist.urls')),
     # path('', gigs, name='gigs'),
 ]
+

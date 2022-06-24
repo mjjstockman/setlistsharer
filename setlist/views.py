@@ -17,7 +17,6 @@ def add(request):
             form.save()
             return redirect('/')
 
-
     context = {
         'form': form
     }

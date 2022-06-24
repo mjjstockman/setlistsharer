@@ -4,6 +4,7 @@ from datetime import date
 # Create your models here.
 # STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
 
+
 class Gig(models.Model):
     date = models.DateField(auto_now_add=False, auto_now=False, blank=True,
                             null=True)
