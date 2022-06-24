@@ -5,12 +5,17 @@ from .forms import SetlistForm
 
 
 def add(request):
-    form = SetlistForm()
+    author = request.user
+    initial = {
+        'author': author,
+    }
+
+    form = SetlistForm(initial=initial)
     if request.method == 'POST':
         form = SetlistForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('')
+            return redirect('/')
 
 
     context = {
