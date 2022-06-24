@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from .forms import SetlistForm
+from home.views import Gig
 
 
 def add(request, pk):

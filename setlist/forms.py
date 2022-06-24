@@ -7,5 +7,6 @@ class SetlistForm(forms.ModelForm):
         model = Setlist
         fields = ['gig', 'song', 'author']
         widgets = {
+            'gig': forms.HiddenInput(),
             'author': forms.HiddenInput(),
             }
