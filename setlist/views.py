@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from .forms import SetlistForm
+from .forms import SetlistAddForm, SetlistEditForm
+from .models import Setlist
 from home.views import Gig
 
 
@@ -13,9 +14,9 @@ def add(request, pk):
         'author': author,
     }
 
-    form = SetlistForm(initial=initial)
+    form = SetlistAddForm(initial=initial)
     if request.method == 'POST':
-        form = SetlistForm(request.POST)
+        form = SetlistAddForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('/')
@@ -28,10 +29,10 @@ def add(request, pk):
 
 def edit(request, pk):
     setlist = Setlist.objects.get(id=pk)
-    form = SetlistForm(instance=setlist)
+    form = SetlistEditForm(instance=setlist)
 
     if request.method == 'POST':
-        form = SetlistForm(request.POST, instance=setlist)
+        form = SetlistEditForm(request.POST, instance=setlist)
         if form.is_valid():
             form.save()
             return redirect('/')
@@ -39,4 +40,4 @@ def edit(request, pk):
     context = {
         'form': form,
     }
-    return render(request, 'setlist/add.html', context)
+    return render(request, 'add.html', context)

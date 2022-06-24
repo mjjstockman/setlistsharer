@@ -2,7 +2,7 @@ from django import forms
 from .models import Setlist
 
 
-class SetlistForm(forms.ModelForm):
+class SetlistAddForm(forms.ModelForm):
     class Meta:
         model = Setlist
         fields = ['gig', 'song', 'author']
@@ -10,3 +10,14 @@ class SetlistForm(forms.ModelForm):
             'gig': forms.HiddenInput(),
             'author': forms.HiddenInput(),
             }
+
+
+class SetlistEditForm(forms.ModelForm):
+    class Meta:
+        model = Setlist
+        fields = ['gig', 'song']
+        widgets = {
+            'gig': forms.HiddenInput(),
+            }
+
+

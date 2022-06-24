@@ -1,6 +1,6 @@
 # from django.contrib import admin
 from django.urls import path
-from .views import add
+from .views import add, edit
 
 urlpatterns = [
     # path('', get_setlists, name='setlist'),
