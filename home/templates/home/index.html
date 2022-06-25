@@ -4,12 +4,9 @@
 {% block content %}
     {% for gig in gigs %}
         {{ gig.venue }}
-        Author ID: {{ gig.setlist_gig.author.id }} 
-        User ID: {{ user.id }}
-        <!-- Autor ID is: {{ gig.setlist.author.id }} -->
-        <!-- {% if user.id != setlist.author.id %}
+        {% if user.id == gig.setlist_gig.author.id %} 
             <a href="#">EDIT</a>
             <a href="#">DELETE</a>
-        {% endif %} -->
+        {% endif %} 
     {% endfor %}
 {% endblock %}
