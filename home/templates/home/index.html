@@ -5,7 +5,7 @@
     {% for gig in gigs %}
         {{ gig.venue }}
         {% if user.id == gig.setlist_gig.author.id %} 
-            <a href="#">EDIT</a>
+            <a href="{% url 'setlist/add/'  %}">EDIT</a>
             <a href="#">DELETE</a>
         {% endif %} 
     {% endfor %}
