@@ -3,6 +3,12 @@
 
 {% block content %}
     {% for gig in gigs %}
-        {{ gig.venue }}
+        {% if gig.setlist_gig.status == 0 %}
+            SETLIST STATUS = 0
+        {% else %}
+            SETLIST STATUS = 1
+        {% endif %}
+        {{ gig }}
     {% endfor %}
 {% endblock %}
+
