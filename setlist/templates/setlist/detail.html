@@ -2,12 +2,13 @@
 
 {% block content %}
 
-<!-- <form action="" method="POST">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Submit Setlist</button>
-</form> -->
+{{ setlist }}
 
-FROM SETLIST/DETAIL
+{% for song in setlist.song.all %}
+    {{ song.title }}
+    {% for release in song.releases.all %}
+        {{ release }}
+    {% endfor %}
+{% endfor %}
 
 {% endblock %}
