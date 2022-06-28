@@ -5,10 +5,16 @@
     {% for gig in gigs %}
         {% if gig.setlist_gig.status == 0 %}
             SETLIST IS WAITING CONFIRMATION
-            {{ gig }}
+            <ul>
+                <li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li>
+            </ul>
         {% elif gig.setlist_gig.status == 1 %}
             SETLIST IS PUBLISHED
             {{ gig }}
+            <ul>
+                <a href="/setlist/detail/{{ gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
+                <a href="/setlist/detail/{{ gig.id }}"><li>VIEW SETLIST</li></a>
+            </ul>
         {% else %}
             NO SETLIST 
             {{ gig }}
