@@ -49,4 +49,4 @@ def detail(request, pk):
     context = {
         'setlist': setlist,
     }
-    return render(request, 'setlist/setlist-detail.html', context)
+    return render(request, 'setlist/detail.html', context)
