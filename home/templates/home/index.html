@@ -4,11 +4,15 @@
 {% block content %}
     {% for gig in gigs %}
         {% if gig.setlist_gig.status == 0 %}
-            SETLIST STATUS = 0
+            SETLIST IS WAITING CONFIRMATION
+            {{ gig }}
+        {% elif gig.setlist_gig.status == 1  %}
+            SETLIST IS PUBLISHED
+            {{ gig }}
         {% else %}
-            SETLIST STATUS = 1
+            NO SETLIST 
+             {{ gig }}
         {% endif %}
-        {{ gig }}
     {% endfor %}
 {% endblock %}
 
