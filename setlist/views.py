@@ -66,3 +66,31 @@ def delete(request, pk):
         'setlist': setlist,
     }
     return render(request, 'setlist/delete.html', context)
+
+
+def agree(request, pk):
+    setlist = Setlist.objects.get(id=pk)
+    disagree = False
+
+    for disagree in setlist.disagree.all():
+        if disagree == request.user:
+            disagree = True
+            break
+
+    if disagree:
+        setlist.disagree.remove(request.user)
+
+    agree = False
+
+    for agree in setlist.agree.all():
+        if agree == request.user:
+            agree = True
+            break
+        
+    if not agree:
+        setlist.agree.add(request.user)
+
+    if agree:
+        setlist.agree.remove(request.user)
+
+    return redirect(request.META['HTTP_REFERER'])
