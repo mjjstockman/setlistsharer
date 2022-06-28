@@ -25,7 +25,7 @@ def add(request, pk):
     context = {
         'form': form
     }
-    return render(request, 'add.html', context)
+    return render(request, 'setlist/add.html', context)
 
 
 def edit(request, pk):

@@ -6,12 +6,16 @@
         {% if gig.setlist_gig.status == 0 %}
             SETLIST IS WAITING CONFIRMATION
             {{ gig }}
-        {% elif gig.setlist_gig.status == 1  %}
+        {% elif gig.setlist_gig.status == 1 %}
             SETLIST IS PUBLISHED
             {{ gig }}
         {% else %}
             NO SETLIST 
-             {{ gig }}
+            {{ gig }}
+            <ul>
+                <a href="/setlist/add/{{ gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
+                <a href="/setlist/add/{{ gig.id }}"><li>ADD SETLIST</li></a>
+            </ul>
         {% endif %}
     {% endfor %}
 {% endblock %}
