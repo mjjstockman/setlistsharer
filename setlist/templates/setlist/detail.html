@@ -9,6 +9,10 @@
     {% for release in song.releases.all %}
         {{ release }}
     {% endfor %}
+
+    Logged in user is: {{ user.id }}
+    Setlist author is: {{ setlist.author.id }}
+    <button>Edit</button>
 {% endfor %}
 
 {% endblock %}
