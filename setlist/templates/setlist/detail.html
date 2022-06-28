@@ -19,13 +19,13 @@
         <input type="hidden" name="next" value=" {{ request.path }}">
         <button type="submit", name="setlist_id", value="{{ setlist.id }}">Agree</button>
     </form>
-
+    Argeed by {{ setlist.agree.all.count }} number of users.
     <form action="{% url 'disagree' setlist.pk %}" method="POST">
     {% csrf_token %}
         <input type="hidden" name="next" value=" {{ request.path }}">
         <button type="submit", name="setlist_id", value="{{ setlist.id }}">Disagree</button>
     </form>
-
+    Disrgeed by {{ setlist.disagree.all.count }} number of users.
 {% endif %}
 
 {% endblock %}
