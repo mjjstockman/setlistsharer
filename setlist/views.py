@@ -94,3 +94,33 @@ def agree(request, pk):
         setlist.agree.remove(request.user)
 
     return redirect(request.META['HTTP_REFERER'])
+
+
+def disagree(request, pk):
+    setlist = get_object_or_404(Setlist, id=request.POST.get('setlist_id'))
+
+    agree = False
+
+    for agree in setlist.agree.all():
+        if agree == request.user:
+            agree = True
+            break
+
+    if agree:
+        setlist.agree.remove(request.user)
+
+    disagree = False
+
+    for disagree in setlist.disagree.all():
+        if disagree == request.user:
+            disagree = True
+            break
+        
+    if not disagree:
+        setlist.disagree.add(request.user)
+
+    # change to else??
+    if disagree:
+        setlist.disagree.remove(request.user)
+
+    return redirect(request.META['HTTP_REFERER'])
