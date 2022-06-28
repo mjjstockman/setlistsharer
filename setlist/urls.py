@@ -1,6 +1,6 @@
 # from django.contrib import admin
 from django.urls import path
-from .views import add, edit, detail, delete
+from .views import add, edit, detail, delete, agree, disagree
 
 urlpatterns = [
     # path('', get_setlists, name='setlist'),
@@ -8,4 +8,6 @@ urlpatterns = [
     path('edit/<str:pk>/', edit, name='edit_setlist'),
     path('detail/<str:pk>/', detail, name='detail_setlist'),
     path('delete/<str:pk>/', delete, name='delete_setlist'),
+    path('agree/<str:pk>/', agree, name='agree'),
+    path('disagree/<str:pk>/', disagree, name='disagree'),
 ]

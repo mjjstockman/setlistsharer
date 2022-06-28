@@ -14,7 +14,18 @@
     <a href="{% url 'edit_setlist' setlist.id %}">EDIT</a>
     <a href="{% url 'delete_setlist' setlist.id %}">DELETE</a>
 {% else %}
-    NOT SETLIST AUTHOR
+<form action="{% url 'agree' setlist.pk %}" method="POST">
+    {% csrf_token %}
+        <input type="hidden" name="next" value=" {{ request.path }}">
+        <button type="submit", name="setlist_id", value="{{ setlist.id }}">Agree</button>
+    </form>
+
+    <form action="{% url 'disagree' setlist.pk %}" method="POST">
+    {% csrf_token %}
+        <input type="hidden" name="next" value=" {{ request.path }}">
+        <button type="submit", name="setlist_id", value="{{ setlist.id }}">Disagree</button>
+    </form>
+
 {% endif %}
 
 {% endblock %}
