@@ -10,9 +10,9 @@
         {{ release }}
     {% endfor %}
 
-    Logged in user is: {{ user.id }}
-    Setlist author is: {{ setlist.author.id }}
-    <button>Edit</button>
+    {% if user.id == setlist.author.id %}
+        <a href="{% url 'edit_setlist' setlist.id %}">EDIT</a>
+    {% endif %}
 {% endfor %}
 
 {% endblock %}
