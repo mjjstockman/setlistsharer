@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from home.views import Gig
 from .forms import SetlistAddForm, SetlistEditForm
 from .models import Setlist
-from home.views import Gig
+
 
 
 def add(request, pk):  
@@ -42,3 +42,11 @@ def edit(request, pk):
         'form': form,
     }    
     return render(request, 'add.html', context)
+
+
+def detail(request, pk):
+    setlist = Setlist.objects.get(id=pk)
+    context = {
+        'setlist': setlist,
+    }
+    return render(request, 'setlist/setlist-detail.html', context)
