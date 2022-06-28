@@ -1,9 +1,11 @@
 from django.shortcuts import render, redirect
 
 # Create your views here.
+from django.contrib.auth.decorators import login_required
 from home.views import Gig
 from .forms import SetlistAddForm, SetlistEditForm
 from .models import Setlist
+
 
 
 
@@ -44,6 +46,7 @@ def edit(request, pk):
     return render(request, 'setlist/add.html', context)
 
 
+@login_required
 def detail(request, pk):
     setlist = Setlist.objects.get(id=pk)
     context = {
