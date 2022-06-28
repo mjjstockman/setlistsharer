@@ -11,9 +11,9 @@
         {% elif gig.setlist_gig.status == 1 %}
             SETLIST IS PUBLISHED
             {{ gig }}
+            {{ gig.setlist_gig.setlist.id }}
             <ul>
-                <a href="/setlist/detail/{{ gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
-                <a href="/setlist/detail/{{ gig.id }}"><li>VIEW SETLIST</li></a>
+                <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
             </ul>
         {% else %}
             NO SETLIST 
