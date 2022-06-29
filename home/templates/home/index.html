@@ -3,15 +3,28 @@
 
 {% block content %}
     {% for gig in gigs %}
-        IMAGE STATUS IS: {{ gig.image_status }}
-        <!-- {% if 'placeholder' not in gig.featured_image.url %}
-            <img src="{{ gig.featured_image.url }}" alt="didnt work"> 
-        {% endif %} -->
+        <!-- IMAGE STATUS IS: {{ gig.image_status }} -->
+        {% if gig.image_status == 0 %}
+            <form action="/add-image/{{ gig.id }}">
+                <input type="submit" value="Add Photo">
+            </form>
+            NO IMG
+        {% elif gig.image_status == 1 %}
+            IMG WAITING CONFIRMATION
+        {% else %}
+            PUBLISHED IMG
+        {% endif %} 
         {% if gig.setlist_gig.status == 0 %}
             SETLIST IS WAITING CONFIRMATION
             <ul>
                 <li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li>
             </ul>
+            <!-- <form action="/add-image/{{ gig.id }}">
+                <input type="submit" value="Add Photo">
+            </form> -->
+            {% if 'placeholder' not in gig.featured_image.url %}
+                <img src="{{ gig.featured_image.url }}" alt="didnt work"> 
+            {% endif %}
         {% elif gig.setlist_gig.status == 1 %}
             SETLIST IS PUBLISHED
             {{ gig }}
