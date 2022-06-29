@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from cloudinary.forms import cl_init_js_callbacks
 from django.contrib.auth.decorators import login_required
+from cloudinary.forms import cl_init_js_callbacks
 from home.models import Gig
 from .forms import AddImageForm
 
