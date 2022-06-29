@@ -23,7 +23,6 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('setlist/', include('setlist.urls')),
-    path('add-image/', include('addimage.urls')),
-    # path('', gigs, name='gigs'),
+    path('add-image/<str:pk>', include('addimage.urls')),
 ]
 
