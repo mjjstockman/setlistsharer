@@ -1,5 +1,6 @@
-from django.db import models
 from datetime import date
+from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 # STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
@@ -10,7 +11,7 @@ class Gig(models.Model):
                             null=True)
     venue = models.ForeignKey('setlist.Venue', on_delete=models.CASCADE,
                               null=True)
-    # featured_image = CloudinaryField('image', null=True, blank=True)
+    image = CloudinaryField('image', null=True, blank=True)
     # featured_image_status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
