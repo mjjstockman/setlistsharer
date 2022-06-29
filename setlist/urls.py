@@ -1,7 +1,8 @@
 # from django.contrib import admin
 from django.urls import path
-from .views import add, edit, detail, delete, agree, disagree
 from addimage.views import add_image
+from .views import add, edit, detail, delete, agree, disagree
+
 
 urlpatterns = [
     # path('', get_setlists, name='setlist'),

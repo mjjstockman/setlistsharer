@@ -1,5 +1,5 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def add_image(request):
-    return HttpResponse('ADD IMAGE PAGE')
+    return render(request, 'addimage/addimage.html')
