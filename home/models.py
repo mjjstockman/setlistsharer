@@ -3,7 +3,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-# STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
+STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
 
 
 class Gig(models.Model):
@@ -12,7 +12,7 @@ class Gig(models.Model):
     venue = models.ForeignKey('setlist.Venue', on_delete=models.CASCADE,
                               null=True)
     image = CloudinaryField('image', null=True, blank=True)
-    # featured_image_status = models.IntegerField(choices=STATUS, default=0)
+    image_status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ['date']

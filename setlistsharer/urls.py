@@ -25,4 +25,3 @@ urlpatterns = [
     path('setlist/', include('setlist.urls')),
     path('add-image/<str:pk>', include('addimage.urls')),
 ]
-
