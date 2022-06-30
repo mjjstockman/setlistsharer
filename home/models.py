@@ -11,8 +11,6 @@ class Gig(models.Model):
                             null=True)
     venue = models.ForeignKey('setlist.Venue', on_delete=models.CASCADE,
                               null=True)
-    image = CloudinaryField('image', null=True, blank=True)
-    image_status = models.IntegerField(choices=STATUS, default=0)
 
     class Meta:
         ordering = ['date']
