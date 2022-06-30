@@ -7,10 +7,11 @@ STATUS = ((0, 'No Image'), (1, 'Image Waiting Confirmation'), (2, 'Published Ima
 
 
 class Image(models.Model):
-    gig = models.ForeignKey(Gig, on_delete=models.CASCADE)
+    gig = models.OneToOneField('home.Gig', related_name='gig_image',
+                               on_delete=models.CASCADE, null=True)
     image = CloudinaryField('image', null=True, blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
 
-    # def __str__(self):
-    #     return f"{self.venue} in {self.venue.city} on {self.date}"
+    def __str__(self):
+        return f"Image for {self.gig}"

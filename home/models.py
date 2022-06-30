@@ -3,7 +3,7 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-STATUS = ((0, 'No Image'), (1, 'Image Waiting Confirmation'), (2, 'Published Image'))
+# STATUS = ((0, 'No Image'), (1, 'Image Waiting Confirmation'), (2, 'Published Image'))
 
 
 class Gig(models.Model):
