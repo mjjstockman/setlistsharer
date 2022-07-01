@@ -15,7 +15,7 @@ def add_image(request, pk):
     form = AddImageForm(request.POST, request.FILES, instance=gig)
     if request.method == 'POST':
         if form.is_valid():
-            # gig.featured_image_status = 1
+            gig.image_status = 1
             form.save()
             return redirect('/')
 
