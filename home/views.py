@@ -1,11 +1,14 @@
 from django.shortcuts import render
 from setlist.models import Setlist
 from .models import Gig
+# from .forms import 
 
-
+# Create your views here.
 
 def gigs(request):
-    gigs = Gig.objects.all()
+    gigs = Gig.objects.all().order_by('date')
+
+
     context = {
         'gigs': gigs,
     }

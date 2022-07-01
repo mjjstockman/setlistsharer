@@ -1,8 +1,8 @@
 from django import forms
-from .models import Image
+from home.models import Gig
 
 
 class AddImageForm(forms.ModelForm):
     class Meta:
-        model = Image
-        fields = ['image']
+        model = Gig
+        fields = ['featured_image']

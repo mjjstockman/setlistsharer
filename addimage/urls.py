@@ -1,4 +1,5 @@
 from django.urls import path
+from home.views import gigs
 from .views import add_image
 
 
