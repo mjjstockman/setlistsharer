@@ -2,9 +2,7 @@
 {% load static %}
 
 {% block content %}
-jhkgfdsadfdgfhjgklkgfd
     {% for gig in gigs %}
-        <!-- {{ gig.image_status }} -->
         {% if gig.image_status != 2 %}
             <form action="/add-image/{{ gig.id }}">
                 <input type="submit" value="Add Photo">
