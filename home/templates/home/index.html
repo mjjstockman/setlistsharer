@@ -2,13 +2,15 @@
 {% load static %}
 
 {% block content %}
+jhkgfdsadfdgfhjgklkgfd
     {% for gig in gigs %}
-        {% if gig.gig_image.status != 2 %}
+        <!-- {{ gig.image_status }} -->
+        {% if gig.image_status != 2 %}
             <form action="/add-image/{{ gig.id }}">
                 <input type="submit" value="Add Photo">
             </form>
         {% else %}
-            <img src="{{ gig.gig_image.image.url }}" alt="didnt work"> 
+            <img src="{{ gig.image.url }}" alt="Photograph from {{ gig }}"> 
         {% endif %} 
         {% if gig.setlist_gig.status == 0 %}
             SETLIST IS WAITING CONFIRMATION
