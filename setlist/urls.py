@@ -12,5 +12,5 @@ urlpatterns = [
     path('delete/<str:pk>/', delete, name='delete_setlist'),
     path('agree/<str:pk>/', agree, name='agree'),
     path('disagree/<str:pk>/', disagree, name='disagree'),
-    path('add-image/', add_image, name='add_image'),
+    path('add-image/<str:pk>/', add_image, name='add_image'),
 ]
