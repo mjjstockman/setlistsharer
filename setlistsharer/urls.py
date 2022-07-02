@@ -23,5 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
     path('setlist/', include('setlist.urls')),
-    path('add-image/<str:pk>', include('addimage.urls')),
+    path('add-image/<str:pk>/', include('addimage.urls')),
 ]
