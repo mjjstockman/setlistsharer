@@ -1,3 +1,13 @@
+
 body {
     background-color: blueviolet;
+}
+
+.navbar {
+    height: 100px;
+    box-shadow: 0px 3px 6px #777;
+}
+
+.navbar-brand {
+    width: 10%;
 }
