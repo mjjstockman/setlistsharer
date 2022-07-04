@@ -13,3 +13,4 @@ def gigs(request):
         'gigs': gigs,
     }
     return render(request, 'home/index.html', context)
+

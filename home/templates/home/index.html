@@ -21,6 +21,8 @@
             <ul>
                 <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
             </ul>
+            Agreed by {{ gig.setlist_gig.agree.all.count }} number of users.
+            Disargeed by {{ gig.setlist_gig.disagree.all.count }} number of users.
         {% else %}
             NO SETLIST 
             {{ gig }}
