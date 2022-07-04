@@ -13,20 +13,19 @@
         {% if gig.setlist_gig.status == 0 %}
             SETLIST IS WAITING CONFIRMATION
             <ul>
-                <li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li>
+                <li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li>
             </ul>
         {% elif gig.setlist_gig.status == 1 %}
             SETLIST IS PUBLISHED
             {{ gig }}
-            {{ gig.setlist_gig.setlist.id }}
             <ul>
-                <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
+                <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
             </ul>
         {% else %}
             NO SETLIST 
             {{ gig }}
             <ul>
-                <a href="/setlist/add/{{ gig.id }}"><li>{{ gig.date }} {{ gig.venue }} {{ gig.venue.city }}</li></a>
+                <a href="/setlist/add/{{ gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
                 <a href="/setlist/add/{{ gig.id }}"><li>ADD SETLIST</li></a>
             </ul>
         {% endif %}
