@@ -23,7 +23,10 @@
         <hr>
         {% for gig in gigs %}
             {% if gig.image_status != 2 %}
-                <img src="{% get_static_prefix %}images/random/live{{ random_num }}.jpg" alt="Random image of a gig">
+            <div>
+                <img src="{% get_static_prefix %}images/random/live{{ random_num }}.jpg" class="img-fluid w-50" alt="Random image of a gig">
+            </div>
+                
                 <form action="/add-image/{{ gig.id }}">
                     <input type="submit" value="Add Photo">
                 </form>

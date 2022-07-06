@@ -3,14 +3,6 @@ body {
     background-color: blueviolet;
 }
 
-<<<<<<< HEAD
-=======
-.text-center {
-    text-align: center;
-  }
-
-/* nav */
->>>>>>> 7f9acf7580b10a95304a9b65347d997d3ca51e08
 .navbar {
     height: 6rem;
     box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
@@ -19,7 +11,6 @@ body {
     letter-spacing: 0.1rem;
 }
 
-<<<<<<< HEAD
 .navbar-brand {
     width: 15%;
 }
@@ -28,23 +19,10 @@ body {
     color: green !important; 
     padding: 1.5rem !important;
  }
-=======
-.navbar-brand img {
-    height: 9rem;
-}
-
-.nav-item a {
-   color: green !important; 
-   padding: 1.5rem !important;
-}
-
->>>>>>> 7f9acf7580b10a95304a9b65347d997d3ca51e08
 
 .nav-item a.active,
 .nav-item a:hover {
     color: rgb(128, 53, 0) !important; 
-<<<<<<< HEAD
-=======
  }
 
 
@@ -81,5 +59,9 @@ hr {
 
 #band-logo {
     padding: 1rem 3rem;
->>>>>>> 7f9acf7580b10a95304a9b65347d997d3ca51e08
 }
+
+/* .gig-img {
+    
+} */
+
