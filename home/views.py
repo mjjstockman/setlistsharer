@@ -7,6 +7,7 @@ from .models import Gig
 
 def gigs(request):
     gigs = Gig.objects.all().order_by('date')
+    
 
 
     context = {

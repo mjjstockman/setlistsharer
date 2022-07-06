@@ -2,46 +2,66 @@
 {% load static %}
 
 {% block content %}
-    {% for gig in gigs %}
-        {% if gig.image_status != 2 %}
-            <form action="/add-image/{{ gig.id }}">
-                <input type="submit" value="Add Photo">
-            </form>
-        {% else %}
-            <img src="{{ gig.image.url }}" alt="Photograph from {{ gig }}"> 
-        {% endif %} 
-        {% if gig.setlist_gig.status == 0 %}
-            SETLIST IS WAITING CONFIRMATION
-            <ul>
-                <li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li>
-            </ul>
-        {% elif gig.setlist_gig.status == 1 %}
-            SETLIST IS PUBLISHED
-            {{ gig }}
-            <ul>
-                <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
-            </ul>
+    <div class="hero">
+        <div class="centered col-6" id="hero-text">
+            <h1 class="text-center">Setlist Sharer</h1>
+            <hr>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo hic ullam quis! Eius enim eaque natus quas unde esse fuga!
+        </div>  
+    </div>
+    
+    <div class="container">
+        <h1 class="text-center">About</h1>
+        <hr>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil illo veritatis molestias pariatur. Soluta vero corporis beatae, provident praesentium obcaecati vel repudiandae, voluptatem commodi hic voluptatibus. Libero veniam at assumenda provident hic tempora unde, similique deserunt vero pariatur voluptatum atque, tempore optio voluptatem ipsum debitis quia officiis explicabo et!
+        
+        <div>
+           <h1 class="text-center"><img src="{% static 'images/idles-logo.jpg' %}" class="col-4" id="band-logo" alt="Idles logo">winter tour 2022</h1>
+        </div>
+        
+        <h1 class="text-center">Gigs</h1>
+        <hr>
+        {% for gig in gigs %}
+            {% if gig.image_status != 2 %}
+                <form action="/add-image/{{ gig.id }}">
+                    <input type="submit" value="Add Photo">
+                </form>
+            {% else %}
+                <img src="{{ gig.image.url }}" alt="Photograph from {{ gig }}"> 
+            {% endif %} 
+            {% if gig.setlist_gig.status == 0 %}
+                <!-- SETLIST IS WAITING CONFIRMATION -->
+                <ul>
+                    <li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li>
+                </ul>
+            {% elif gig.setlist_gig.status == 1 %}
+                <!-- SETLIST IS PUBLISHED -->
+                {{ gig }}
+                <ul>
+                    <a href="/setlist/detail/{{ gig.setlist_gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
+                </ul>
 
-            Agreed by {{ gig.setlist_gig.agree.all.count }} 
-            {% if gig.setlist_gig.agree.all.count == 1 %} 
-                user.
+                Agreed by {{ gig.setlist_gig.agree.all.count }} 
+                {% if gig.setlist_gig.agree.all.count == 1 %} 
+                    user.
+                {% else %}
+                    users.
+                {% endif %}
+                Disargeed by {{ gig.setlist_gig.disagree.all.count }} 
+                {% if gig.setlist_gig.disagree.all.count == 1 %} 
+                    user.
+                {% else %}
+                    users.
+                {% endif %}
             {% else %}
-                users.
+                NO SETLIST 
+                {{ gig }}
+                <ul>
+                    <a href="/setlist/add/{{ gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
+                    <a href="/setlist/add/{{ gig.id }}"><li>ADD SETLIST</li></a>
+                </ul>
             {% endif %}
-            Disargeed by {{ gig.setlist_gig.disagree.all.count }} 
-            {% if gig.setlist_gig.disagree.all.count == 1 %} 
-                user.
-            {% else %}
-                users.
-            {% endif %}
-        {% else %}
-            NO SETLIST 
-            {{ gig }}
-            <ul>
-                <a href="/setlist/add/{{ gig.id }}"><li>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</li></a>
-                <a href="/setlist/add/{{ gig.id }}"><li>ADD SETLIST</li></a>
-            </ul>
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}
 
