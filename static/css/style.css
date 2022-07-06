@@ -1,3 +1,25 @@
 body {
     background-color: blueviolet;
 }
+
+.navbar {
+    height: 6rem;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.navbar-brand {
+    width: 15%;
+}
+
+.nav-item a {
+    color: green !important; 
+    padding: 1.5rem !important;
+ }
+
+.nav-item a.active,
+.nav-item a:hover {
+    color: rgb(128, 53, 0) !important; 
+}
