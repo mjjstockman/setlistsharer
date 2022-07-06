@@ -1,25 +1,16 @@
-from django.test import TestCase
+# from django.test import TestCase
+from django.test import SimpleTestCase
 from django.test import Client
-from django.urls import reverse
+from django.urls import reverse, resolve
 from .models import Gig
+from .views import gigs
 # Create your tests here.
 
 
-class TestViews(TestCase):
-
-    def setUp(self):
-        self.client = Client()
-        testgig = Gig.objects.create()
-
-        
-    def testhome(self):
-        response = self.client.get(reverse('index'))
-        print(response.content)
-        print(response.headers)
-        print(response.reason_phrase)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'home/index.html')
-        self.assertTemplateUsed(response, 'base.html')
+class TestViews(SimpleTestCase):        
+    def test_home_url(self):
+        url = reverse('index')
+        self.assertEqual(resolve(url).func, gigs)
 
 if __name__ == '__main__':
     unittest.main()
