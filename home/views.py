@@ -11,7 +11,6 @@ def gigs(request):
     random_num = random.randrange(0, 14)
     
 
-
     context = {
         'gigs': gigs,
         'random_num': random_num

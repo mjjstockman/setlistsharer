@@ -7,8 +7,6 @@ from .forms import SetlistAddForm, SetlistEditForm
 from .models import Setlist
 
 
-
-
 def add(request, pk):  
     gig = Gig.objects.get(id=pk)
     author = request.user
