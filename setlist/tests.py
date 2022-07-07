@@ -5,6 +5,7 @@ from datetime import datetime
 from django.test import Client
 from django.urls import reverse, resolve
 from django.test import SimpleTestCase
+from .views import add, edit, detail, delete, agree, disagree
 # from .models import Gig
 # from .views import gigs
 # Create your tests here.
@@ -17,18 +18,38 @@ from django.test import SimpleTestCase
 
 
 
-class TestViews(TestCase):   
+class TestUrls(TestCase):   
 
-    def setUp(self):
-        self.user = User.objects.create(username='myname', password='batTab21', email='a@a.com')
-        self.venue = Venue.objects.create(name='Rock City', city='Nottingham')
-        self.song = Song.objects.create(title='A Song')
-        self.release = Release.objects.create(title='An Album', songs='A Song')
-        self.setlist = Setlist.objects.create(gig='A Song')
-        self.song = Song.objects.create(title='A Song')
-        self.song = Song.objects.create(title='A Song')
-        self.song = Song.objects.create(title='A Song')
-        self.song = Song.objects.create(title='A Song')
+    def test_add(self):
+        url = reverse('add_setlist', args=[1])
+        self.assertEqual(resolve(url).func, add)
+        
+    def test_edit(self):
+        url = reverse('edit_setlist', args=[1])
+        self.assertEqual(resolve(url).func, edit)
+  
+    def test_detail(self):
+        url = reverse('delete_setlist', args=[1])
+        self.assertEqual(resolve(url).func, delete)
+
+    def test_agree(self):
+        url = reverse('agree', args=[1])
+        self.assertEqual(resolve(url).func, agree)
+
+    def test_disagree(self):
+        url = reverse('disagree', args=[1])
+        self.assertEqual(resolve(url).func, disagree)
+
+    # def setUp(self):
+    #     self.user = User.objects.create(username='myname', password='batTab21', email='a@a.com')
+    #     self.venue = Venue.objects.create(name='Rock City', city='Nottingham')
+    #     self.song = Song.objects.create(title='A Song')
+    #     self.release = Release.objects.create(title='An Album', songs='A Song')
+    #     self.setlist = Setlist.objects.create(gig='A Song')
+    #     self.song = Song.objects.create(title='A Song')
+    #     self.song = Song.objects.create(title='A Song')
+    #     self.song = Song.objects.create(title='A Song')
+    #     self.song = Song.objects.create(title='A Song')
 
 
 
