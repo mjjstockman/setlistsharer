@@ -2,7 +2,7 @@ from django.test import TestCase
 from datetime import datetime
 from django.test import Client
 from django.urls import reverse, resolve
-from django.test import SimpleTestCase
+# from django.test import SimpleTestCase
 from django.contrib.auth.models import User
 from home.models import Gig
 from .views import add, edit, detail, delete, agree, disagree
@@ -28,23 +28,38 @@ class TestViews(TestCase):
             title='An Album',
         )
         
-        gig1= Gig.objects.create(
+        gig1=Gig.objects.create(
             date=datetime.now()
         )
+
+        
+        setlist1 = Setlist(status=0, id=1)
+        setlist1.save()
+
+        setlist1.add.song(song1)
 
         user1 = User.objects.create(
             username='user',
             password='dphgfsS34',
             email='c@c.com',
         )
-        
-        setlist1 = Setlist(status=0, id=1)
-        setlist1.save()
+
+        # setlist1 = Setlist(status=0, id=1, gig=gig1, author=user1, song=song1)
+        # setlist1.save()
+
+        # setlist1 = Setlist.objects.create(
+        #     gig=gig1,
+        #     author=user1,
+        # )
+
+        # print(song1)
+
+        # setlist1.song.set = (song1)
+        # setlist1.song.add(song1)
+        # setlist1.save()
+
 
        
-
-
-        # print(user1.username)
         # print(release1.title)
         
         # release1.songs.add(song1)
