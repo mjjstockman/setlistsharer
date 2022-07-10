@@ -43,8 +43,8 @@ class Setlist(models.Model):
     disagree = models.ManyToManyField(User, related_name='setlist_disagree',
                                       blank=True)
 
-    # class Meta:
-    #     ordering = ['gig.date']
+    class Meta:
+        ordering = ['gig__date']
 
-    def __str__(self):
-        return f"{self.gig.venue} on {self.gig.date}"
+    # def __str__(self):
+    #     return f"{self.gig.venue} on {self.gig.date}"

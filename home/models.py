@@ -12,5 +12,5 @@ class Gig(models.Model):
     image_status = models.IntegerField(choices=STATUS, default=0)
 
 
-    def __str__(self):
-        return f"{self.venue} in {self.venue.city} on {self.date}"
+    # def __str__(self):
+    #     return f"{self.venue} in {self.venue.city} on {self.date}"

@@ -14,43 +14,50 @@ class TestViews(TestCase):
 
     def test_setlist_detail(self):
 
-        venue=Venue.objects.create(
+        venue1 = Venue.objects.create(
             name='A Venue',
             city='A City',
         )
 
-        song=Song.objects.create(
+        song1 = Song.objects.create(
             title='A Title',
+            id=1
         )
-       
-        release=Release.objects.create(
+        
+        release1 = Release.objects.create(
             title='An Album',
         )
-
-        setlist=Setlist.objects.create(
-            status=0,
-        )
-
-        gig=Gig.objects.create(
+        
+        gig1= Gig.objects.create(
             date=datetime.now()
         )
 
-        
-        user=User.objects.create(
+        user1 = User.objects.create(
             username='user',
             password='dphgfsS34',
             email='c@c.com',
         )
+        
+        setlist1 = Setlist(status=0, id=1)
+        setlist1.save()
 
-        # song.save()
-        # gig.save()
-        # venue.save()
-        # release.save()
-        # setlist.save()
-        # user.save()
+       
 
-        release.songs.add(song)
-        setlist.gig.add(gig)
+
+        # print(user1.username)
+        # print(release1.title)
+        
+        # release1.songs.add(song1)
+
+        # setlist1.save()
+
+        
+        
+
+
+
+      
+
       
       
 
