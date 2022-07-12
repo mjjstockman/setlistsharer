@@ -242,50 +242,187 @@ Details on site testing can be found [here](TESTING.md).
 
 # Deployment
 
-## How the site was Deployed
+## GitHub
 
 The code was deployed to GitHub Pages in the following way:
 
-1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Select the [GitHub Repository](https://github.com/mjjstockman/hull-college).
-3. Open Settings by clicking on the Settings link (with the cog icon).
-4. Scroll down to the GitHub Pages section and click on the link.
-   <img src="assets/images/readme/github-pages.jpg"  alt="GitHub Pages section">
-5. Click the dropdown box in the Source section (which currently states "none") and select master (this may be named "main" for some users).
-   <img src="assets/images/readme/github-source.jpg"  alt="Selecting master branch as source">
-6. Click Save.
-7. The URL address for the deployed site will be shown.
-   <img src="assets/images/readme/deployed-address.jpg"  alt="Example of URL once deployed">
+Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-[Back to top ⇧](#Hull-College)
+Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+
+Open Settings by clicking on the Settings link (with the cog icon).
+
+Scroll down to the GitHub Pages section and click on the link.
+
+Click the dropdown box in the Source section (which currently states "none") and select master (this may be named "main" for some users).
+
+Click Save.
+
+The URL address for the deployed site will be shown.
+
+[Back to top ⇧](#Setlist-sharer)
+
+- - -
 
 ## How to Fork the Repository
 
-1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Select the [GitHub Repository](https://github.com/mjjstockman/hull-college).
-3. Click "Fork" at the top right of the page.
-4. The repository will be copied into your GitHub account.
+Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
 
-[Back to top ⇧](#Hull-College)
+Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+
+Click "Fork" at the top right of the page.
+
+The repository will be copied into your GitHub account.
+
+[Back to top ⇧](#Setlist-sharer)
+
+- - - 
 
 ## How to create a Clone using SSH
 
-1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Select the [GitHub Repository](https://github.com/mjjstockman/hull-college).
-3. Click on the Code button.
-4. Copy the provided SSH link.
-   <img src="assets/images/readme/code-dropdown.jpg"  alt="Example of the provided link">
-5. Open Terminal.
-6. Navigate into the directory you want to clone the repositroy to.
-7. Type git clone and paste the copied URL.
+Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
+
+Select the [GitHub Repository](https://github.com/mjjstockman/setlistsharer).
+
+Click on the Code button.
+
+Copy the provided SSH link.
+
+Open Terminal.
+
+Navigate into the directory you want to clone the repositroy to.
+
+Type git clone and paste the copied URL.
 
 ```
-$ git clone https://github.com/mjjstockman/hull-college
+$ git clone https://github.com/mjjstockman/https://github.com/mjjstockman/setlistsharer
 ```
 
-8. Press **Enter**.
+Press **Enter**.
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-sharer)
+
+
+
+# Create Heroku app
+Go to https://www.heroku.com/ and login/signup
+
+Click on the New button
+
+In the Resources tab search for Heroku postgres in the Add-ons search box and add to the project.
+
+In the Settings tab click on Reveal Config Vars button
+
+Copy or make a note of the value of the DATABASE_URL var
+
+[Back to top ⇧](#Setlist-sharer)
+
+# Attach PostgreSQL database 
+In settings.py add the following below 'from pathlib import Path
+
+
+    import os
+    import dj_database_url
+    if os.path.isfile('env.py'):
+    	import env
+ 
+ Comment out DATABASES and add the following:
+
+    DATABASES = {
+	    'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
+     }
+
+Migrate changes
+
+[Back to top ⇧](#Setlist-sharer)
+# Prepare environment and settings.py files
+Add a env.py file to the root directory if it does not exist
+
+Add env.py to the .gitignore file
+
+Add the following in env.py and save the file:
+
+    
+    os.environ[‘DATABASE_URL’] = <‘YOUR_DATABASE_URL’>
+    os.environ[‘SECRET_KEY’] = <‘RANDOM_SECRET_KEY’>
+   
+
+Copy your SECRET_KEY
+
+Add SECRET_KEY to Heroku Config vars 
+
+Change SECRET_KEY key in settings.py to:
+
+    SECRET_KEY  =  os.environ.get('SECRET_KEY')
+
+[Back to top ⇧](#Setlist-sharer)
+
+# Store static and media files on Cloudinary
+
+Go to cloudinary.com and login/signup
+
+In the Dashboard copy your API Environment variable
+
+In env.py add:
+
+    os.environ[‘CLOUDINARY_URL’] = <‘CLOUDINARY_API_ENVIRONMENT_VAR’ (with  ‘CLOUIDINARY_URL=‘ removed)>
+*Note the removal of ‘CLOUIDINARY_URL=' at the beginning of the key*
+
+Copy above and add to Heroku Config vars
+
+
+In settings.py add the following to INSTALLED_APPS:
+
+    ‘cloudinary_storage’
+
+*This must go above django.contrib.staticfiles*
+
+  Following django.contrib.staticfiles add:
+
+    'django.contrib.staticfiles',
+    'cloudinary'
+
+Add following to settings.py:
+
+    STATIC_URL = '/static/'
+    STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+Add the following below BASE_DIR declaration:
+
+    TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
+Change 'DIRS' key to TEMPLATES_DIR:
+
+    'DIRS': [TEMPLATES_DIR],
+
+Add `ALLOWED_HOSTS = ['setlist-sharer-this.herokuapp.com', 'localhost']`
+
+Add media, templates and static folders to root level
+
+Create Procfile at root level and add:
+
+    web: gunicorn setlistsharer.wsgi
+
+Add, commit and push to your repo
+
+In the Deploy tab in Heroku click on GitHub for the Deployment method
+
+Search for the repo and click the Connect button
+
+Click on the Deploy Branch button
+
+Click on the Open app button to open the project
+
+[Back to top ⇧](#Setlist-sharer)
+
+
+
 
 # Credits
 
