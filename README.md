@@ -135,8 +135,8 @@ Blue was chosen as the main colour for the site. Research had shown that this is
 
 [Typespiration](https://typespiration.com/) was used to find complimenting [Google Font](https://fonts.google.com) pairings, with the following decided upon:
 
-- Headings: Roboto Condensed, with a fallback of sans-serif.
-- Body: Poppins, with a fallback of sans-serif.
+- Headings: Open Sans, with a fallback of serif. 
+- Body: Crimson Text, with a fallback of sans-serif.
 
 [Back to top ⇧](#Hull-College)
 
