@@ -36,13 +36,20 @@ class TestViews(TestCase):
         setlist1 = Setlist(status=0, id=1)
         setlist1.save()
 
-        setlist1.add.song(song1)
+        # setlist1.add.song(song1)
+        # setlist1.save()
 
         user1 = User.objects.create(
             username='user',
             password='dphgfsS34',
             email='c@c.com',
         )
+
+        setlist1.gig = gig1
+
+        # setlist1.song.create(title='Foo')
+
+        print(setlist1)
 
         # setlist1 = Setlist(status=0, id=1, gig=gig1, author=user1, song=song1)
         # setlist1.save()
