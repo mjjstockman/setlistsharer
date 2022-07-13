@@ -1,12 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@500;600;700&display=swap');
 
+/* body {
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes fontfix {
+    from { opacity: 1; }
+    to   { opacity: 1; }
+} */
+/* - Headings: Open Sans, with a fallback of serif. 
+- Body: Crimson Text, with a fallback of sans-serif. */
 body {
     background-color: blueviolet;
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: sans-serif; */
 }
 
-.hero {
+
+
+/* .hero {
     font-family: 'PT Sans', sans-serif;;
-}
+} */
+
 
 .navbar {
     height: 6rem;
@@ -16,6 +38,7 @@ body {
     letter-spacing: 0.1rem;
 }
 
+/* change to use bootrap col's */
 .navbar-brand {
     width: 15%;
 }
@@ -30,6 +53,10 @@ body {
     color: rgb(128, 53, 0) !important; 
  }
 
+ /* typography */
+ .bold {
+    font-weight: 700;
+ }
 
 /* about */
 .hero {
