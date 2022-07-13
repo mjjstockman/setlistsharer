@@ -46,8 +46,5 @@ class Setlist(models.Model):
     class Meta:
         ordering = ['gig__date']
 
-    # def __str__(self):
-    #     return f"{self.gig.venue} on {self.gig.date}"
-
-    # def __str__(self):
-    #     return f"{self.song.title}"
+    def __str__(self):
+        return f"{self.gig.venue} on {self.gig.date}"

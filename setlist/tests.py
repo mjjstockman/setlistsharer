@@ -21,7 +21,6 @@ class TestViews(TestCase):
 
         song1 = Song.objects.create(
             title='A Title',
-            id=1
         )
         
         release1 = Release.objects.create(
@@ -33,7 +32,7 @@ class TestViews(TestCase):
         )
 
         
-        setlist1 = Setlist(status=0, id=1)
+        setlist1 = Setlist(status=0)
         setlist1.save()
 
         # setlist1.add.song(song1)
@@ -47,41 +46,16 @@ class TestViews(TestCase):
 
         setlist1.gig = gig1
 
+        setlist1.song.add(song1)
+
+        
+
+
+
         # setlist1.song.create(title='Foo')
 
-        print(setlist1)
+        # print(setlist1)
 
-        # setlist1 = Setlist(status=0, id=1, gig=gig1, author=user1, song=song1)
-        # setlist1.save()
-
-        # setlist1 = Setlist.objects.create(
-        #     gig=gig1,
-        #     author=user1,
-        # )
-
-        # print(song1)
-
-        # setlist1.song.set = (song1)
-        # setlist1.song.add(song1)
-        # setlist1.save()
-
-
-       
-        # print(release1.title)
-        
-        # release1.songs.add(song1)
-
-        # setlist1.save()
-
-        
-        
-
-
-
-      
-
-      
-      
 
 
     #   class TestUrls(TestCase):   
