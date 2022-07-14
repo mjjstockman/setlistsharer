@@ -42,9 +42,9 @@
                             SETLIST WAITING CONFIRMATION
                         </div>
                         {% elif gig.setlist_gig.status == 2 %}
-                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-info">View Setlist</a>
+                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-info mb-2">View Setlist</a>
                         {% else %}
-                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-info">Add Setlist</a>
+                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-info mb-2">Add Setlist</a>
                         </a>
                         {% endif %}
                     </div>
