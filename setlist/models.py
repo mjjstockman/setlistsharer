@@ -4,8 +4,8 @@ from datetime import date
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
-
+# STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
+STATUS = ((0, 'No Setlist'), (1, 'Waiting Confirmation'), (2, 'Published'))
 
 class Venue(models.Model):
     name = models.CharField(max_length=200)
