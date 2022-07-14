@@ -38,12 +38,13 @@ body {
 
 /* about */
 .hero {
-	background: url('/static/images/crowd.jpg');
+	/* background: url('/static/images/crowd.jpg'); */
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/crowd.jpg');
 }
 
 /* CHANGE NAME */
