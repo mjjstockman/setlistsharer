@@ -38,7 +38,9 @@
                 <div class="col-6 d-flex align-content-center flex-wrap">
                     <div class="row col-12">
                         {% if gig.setlist_gig.status == 1 %}
-                        WAITING CONFIRMATION
+                        <div class="text-center">
+                            WAITING CONFIRMATION
+                        </div>
                         {% elif gig.setlist_gig.status == 2 %}
                         <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="d-flex align-items-center justify-content-center">
                             <button>View Setlist</button>
@@ -56,7 +58,9 @@
                             <button>Add Photo</button>
                         </a>
                         {% elif gig.image_status == 1 %}
+                        <div class="text-center">
                             IMG WAITING CONFIRMATION 
+                        </div>
                         {% endif %}
                     </div>
                 </div>
