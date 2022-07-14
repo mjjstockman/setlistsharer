@@ -39,24 +39,19 @@
                     <div class="row col-12">
                         {% if gig.setlist_gig.status == 1 %}
                         <div class="text-center">
-                            WAITING CONFIRMATION
+                            SETLIST WAITING CONFIRMATION
                         </div>
                         {% elif gig.setlist_gig.status == 2 %}
-                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="d-flex align-items-center justify-content-center">
-                            <button>View Setlist</button>
-                        </a>
+                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-info">View Setlist</a>
                         {% else %}
-                        <a href="/setlist/add/{{ gig.id }}" class="d-flex align-items-center justify-content-center">
-                            <button>Add Setlist</button>
+                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-info">Add Setlist</a>
                         </a>
                         {% endif %}
                     </div>
 
                     <div class="row col-12">
                         {% if gig.image_status == 0 %}
-                        <a href="/add-image/{{ gig.id }}" class="d-flex align-items-center justify-content-center">
-                            <button>Add Photo</button>
-                        </a>
+                        <a href="/add-image/{{ gig.id }}" class="btn btn-info">Add Photo</a>
                         {% elif gig.image_status == 1 %}
                         <div class="text-center">
                             IMG WAITING CONFIRMATION 
