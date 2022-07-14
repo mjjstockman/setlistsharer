@@ -38,8 +38,7 @@ body {
 
 /* about */
 .hero {
-	/* background: url('/static/images/crowd.jpg'); */
-    height: 400px;
+    height: 10%;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
