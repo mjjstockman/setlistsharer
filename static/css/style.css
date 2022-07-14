@@ -1,33 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@500;600;700&display=swap');
 
-/* body {
-    -webkit-animation-delay: 0.1s;
-    -webkit-animation-name: fontfix;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: linear;
-}
-
-@-webkit-keyframes fontfix {
-    from { opacity: 1; }
-    to   { opacity: 1; }
-} */
-/* - Headings: Open Sans, with a fallback of serif. 
-- Body: Crimson Text, with a fallback of sans-serif. */
 body {
     background-color: blueviolet;
     font-family: 'Crimson Text', serif;
     font-weight: 600;
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: sans-serif; */
 }
 
-
-
-/* .hero {
-    font-family: 'PT Sans', sans-serif;;
-} */
 
 
 .navbar {
@@ -94,7 +72,13 @@ hr {
     padding: 1rem 3rem;
 }
 
-
+#hero-text-box {
+    font-size: 2rem;
+    text-transform: uppercase;
+    background-color: rgba(188, 229, 253, 0.4);
+    border-radius: 1rem;
+    
+}
 
 /* .gig-img {
     
