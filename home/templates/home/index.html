@@ -49,6 +49,16 @@
                         </a>
                         {% endif %}
                     </div>
+
+                    <div class="row col-12">
+                        {% if gig.image_status == 0 %}
+                        <a href="/add-image/{{ gig.id }}" class="d-flex align-items-center justify-content-center">
+                            <button>Add Photo</button>
+                        </a>
+                        {% elif gig.image_status == 1 %}
+                            IMG WAITING CONFIRMATION 
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         {% endfor %}
