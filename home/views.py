@@ -8,12 +8,10 @@ from .models import Gig
 
 def gigs(request):
     gigs = Gig.objects.all().order_by('date')
-    random_num = random.randrange(0, 14)
-    
-
+    image_num = range(0, 14)
     context = {
         'gigs': gigs,
-        'random_num': random_num
+        'image_num': image_num
     }
     return render(request, 'home/index.html', context)
 

@@ -19,6 +19,7 @@
            <h1 class="text-center"><img src="{% static 'images/idles-logo.jpg' %}" class="col-4" id="band-logo" alt="Idles logo">winter tour 2022</h1>
         </div>
         
+
         <h1 class="text-center">Gigs</h1>
         <hr>
         {% for gig in gigs %}
@@ -31,7 +32,7 @@
                     {% if gig.image_status == 2 %}
                     <img src="{{ gig.image.url }}" class="img-fluid" alt="Photograph from {{ gig }}">            
                     {% else %}
-                    <img src="{% get_static_prefix %}images/random/live{{ random_num }}.jpg" class="img-fluid" alt="Random image of a gig">
+                    <img src="{% get_static_prefix %}images/random/live{{ image_num | random }}.jpg" class="img-fluid" alt="Random image of a gig">
                     {% endif %}
                 </div> 
 
