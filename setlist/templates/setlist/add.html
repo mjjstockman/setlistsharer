@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_filters %}
+
 {% block content %}
 
 <form action="" method="POST">
     {% csrf_token %}
-    {{ form }}
+    {{ form | crispy }}
     <button type="submit">Submit Setlist</button>
 </form>
 
