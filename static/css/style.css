@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@500;600;700&display=swap');
 
 body {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     font-family: 'Crimson Text', serif;
     font-weight: 700;
 }
@@ -9,17 +9,17 @@ body {
 
 
 .navbar {
-    height: 6rem;
+    /* height: 6rem; */
     box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.1rem;
+    /* font-size: 1.5rem; */
+    /* font-weight: 600; */
+    /* letter-spacing: 0.1rem; */
 }
 
 /* change to use bootrap col's */
-.navbar-brand {
+/* .navbar-brand {
     width: 15%;
-}
+} */
 
 .nav-item a {
     color: green !important; 
