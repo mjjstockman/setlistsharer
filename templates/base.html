@@ -50,11 +50,13 @@
 
     
     <!-- Logged in username -->
+    <div class="container">
     {% if user.is_authenticated %}
     <div class="text-end">
         Logged in as {{ user }}
     </div>
     {% endif %}
+</div>
 
     <!-- Hero Img -->
     <div id="hero">
