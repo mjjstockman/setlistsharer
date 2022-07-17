@@ -7,6 +7,13 @@ body {
     font-weight: 700;
 }
 
+hr {
+    border: 2px solid #2c3236;
+    border-radius: 1px;
+    width: 70%;
+    margin: auto;
+}
+
 /* Nav */
 nav, .navbar-brand {
     font-size: 1.5rem;
@@ -38,8 +45,8 @@ nav, .navbar-brand {
 }
 
 #hero-text {
-    background-color: red;
-    border-radius: 25px;
+    background-color: rgba(188, 229, 253, 0.4);
+    border-radius: 15px;
 }
 
 
