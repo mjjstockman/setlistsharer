@@ -8,6 +8,15 @@ body {
 }
 
 /* Nav */
+nav, .navbar-brand {
+    font-size: 1.5rem;
+}
+
+/* ADD LATER */
+/* .nav-link {
+    color: 
+} */
+
 .nav-link:hover {
     color: rgb(128, 53, 0) !important; 
  }
