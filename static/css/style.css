@@ -6,9 +6,13 @@ body {
     font-weight: 700;
 }
 
+.nav-link:hover {
+    color: rgb(128, 53, 0) !important; 
+ }
 
-
-
+ .nav-link:active {
+    color: rgb(128, 53, 0) !important; 
+ }
 
 /* .nav-item a {
     color: green !important; 
@@ -16,9 +20,7 @@ body {
  } */
 
 /* .nav-item a.active,
-.nav-item a:hover {
-    color: rgb(128, 53, 0) !important; 
- } */
+ */
 
  /* typography */
  /* .bold {
