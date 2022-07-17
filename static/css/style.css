@@ -13,6 +13,10 @@ nav, .navbar-brand {
     letter-spacing: 0.1rem;
 }
 
+nav, .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
 /* ADD LATER */
 /* .nav-link {
     color: 
@@ -31,6 +35,11 @@ nav, .navbar-brand {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/crowd.jpg'); 
     background-size: cover;
     background-position: center center;
+}
+
+#hero-text {
+    background-color: red;
+    border-radius: 25px;
 }
 
 
