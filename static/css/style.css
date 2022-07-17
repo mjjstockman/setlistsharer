@@ -10,7 +10,10 @@ body {
 /* Nav */
 nav, .navbar-brand {
     font-size: 1.5rem;
+    letter-spacing: 0.2rem;
 }
+
+
 
 /* ADD LATER */
 /* .nav-link {
@@ -31,7 +34,7 @@ nav, .navbar-brand {
     background-size: cover;
     background-position: center center;
 }
-/* /workspace/setlistsharer/static/images/crowd.jpg */
+
 
  /* typography */
  /* .bold {
