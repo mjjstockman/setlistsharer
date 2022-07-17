@@ -1,53 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Open+Sans:wght@500;600;700&display=swap');
 
 body {
-    /* background-color: blueviolet; */
+    background-color: blueviolet;
     font-family: 'Crimson Text', serif;
     font-weight: 700;
 }
 
 
-
-.navbar {
+/* NAV */
+/* .navbar-brand {
+    height: 0.1rem;
+} */
+/* .navbar-brand {
+    width: 15%;
+} */
+/* .navbar { */
+    /* height: 4rem; */
     /* height: 6rem; */
-    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); */
     /* font-size: 1.5rem; */
     /* font-weight: 600; */
     /* letter-spacing: 0.1rem; */
-}
+/* } */
 
 /* change to use bootrap col's */
 /* .navbar-brand {
     width: 15%;
 } */
 
-.nav-item a {
+/* .nav-item a {
     color: green !important; 
     padding: 1.5rem !important;
- }
+ } */
 
-.nav-item a.active,
+/* .nav-item a.active,
 .nav-item a:hover {
     color: rgb(128, 53, 0) !important; 
- }
+ } */
 
  /* typography */
- .bold {
+ /* .bold {
     font-weight: 700;
- }
+ } */
 
 /* about */
-.hero {
+/* .hero {
     height: 10%;
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
     background-position: center center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/crowd.jpg');
-}
+} */
 
 /* CHANGE NAME */
-.centered {
+/* .centered {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,30 +62,30 @@ body {
     text-transform: uppercase;
     background-color: rgba(188, 229, 253, 0.4);
     border-radius: 1rem;
-  }
+  } */
 
-hr {
+/* hr {
     border: 2px solid #2c3236;
     border-radius: 1px;
     width: 70%;
     margin: auto;
-}
+} */
 
-#hero-text {
+/* #hero-text {
     padding: 1rem 3rem;
-}
+} */
 
-#band-logo {
+/* #band-logo {
     padding: 1rem 3rem;
-}
+} */
 
-#hero-text-box {
+/* #hero-text-box {
     font-size: 2rem;
     text-transform: uppercase;
     background-color: rgba(188, 229, 253, 0.4);
     border-radius: 1rem;
     
-}
+} */
 
 /* .gig-img {
     
