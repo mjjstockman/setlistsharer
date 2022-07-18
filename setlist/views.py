@@ -7,6 +7,7 @@ from .forms import SetlistAddForm, SetlistEditForm
 from .models import Setlist
 
 
+@login_required
 def add(request, pk):  
     gig = Gig.objects.get(id=pk)
     author = request.user
@@ -28,6 +29,7 @@ def add(request, pk):
     return render(request, 'setlist/add.html', context)
 
 
+@login_required
 def edit(request, pk):
     setlist = Setlist.objects.get(id=pk)
     form = SetlistEditForm(instance=setlist)
@@ -53,6 +55,7 @@ def detail(request, pk):
     return render(request, 'setlist/detail.html', context)
 
 
+@login_required
 def delete(request, pk):
     setlist = Setlist.objects.get(id=pk)
 
@@ -66,6 +69,7 @@ def delete(request, pk):
     return render(request, 'setlist/delete.html', context)
 
 
+@login_required
 def agree(request, pk):
     setlist = Setlist.objects.get(id=pk)
     disagree = False
@@ -94,6 +98,7 @@ def agree(request, pk):
     return redirect(request.META['HTTP_REFERER'])
 
 
+@login_required
 def disagree(request, pk):
     setlist = get_object_or_404(Setlist, id=request.POST.get('setlist_id'))
 
