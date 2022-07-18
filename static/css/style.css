@@ -49,6 +49,11 @@ nav, .navbar-brand {
     border-radius: 15px;
 }
 
+/* Gigs */
+.gig-btn {
+    border-width: 2px !important;
+    border-radius: 10px;
+}
 
  /* typography */
  /* .bold {

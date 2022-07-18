@@ -37,22 +37,25 @@
                             <i class="fa-solid fa-rotate"></i>SETLIST WAITING CONFIRMATION
                         </div>
                         {% elif gig.setlist_gig.status == 2 %}
-                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-info mb-2">
-                            <i class="fa-solid fa-file"></i>View Setlist</a>
+                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                            <i class="fa-solid fa-file pe-1"></i>View Setlist</a>
                         {% else %}
-                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-info mb-2">
-                            <i class="fa-solid fa-file-circle-plus"></i>Add Setlist</a>
+                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                            <i class="fa-solid fa-file-circle-plus pe-1"></i>Add Setlist</a>
                         {% endif %}
                     </div>
 
                     <div class="row col-12">
                         {% if gig.image_status == 0 %}
-                        <a href="/add-image/{{ gig.id }}" class="btn btn-info">
-                            <i class="fa-solid fa-camera"></i>Add Photo</a>
+                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                            <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
                         {% elif gig.image_status == 1 %}
                         <div class="text-center">
-                            <i class="fa-solid fa-rotate"></i>IMG WAITING CONFIRMATION 
+                            <i class="fa-solid fa-rotate pe-1"></i>IMG WAITING CONFIRMATION 
                         </div>
+                        {% else %}
+                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                            <i class="fa-solid fa-camera pe-1"></i>View Photo</a>
                         {% endif %}
                     </div>
                 </div>
