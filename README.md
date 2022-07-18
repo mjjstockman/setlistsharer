@@ -1,4 +1,4 @@
-# Hull College
+# Setlist Sharer
 
 <img  src="assets/images/readme/amiresponsive.jpg"  alt="Mockup of the Hull College website on a phone, tablet, laptop and monitor screen">
 
@@ -43,16 +43,17 @@
 
 # Introduction
 
-This is a fictional website (for educational purposes) for potential students to find basic information about **Hull College** in East Yorkshire, England. It gives basic information on the college's success, the courses offered and a way to contact them, so users can gauge the suitability of the college.
+This is a fictional website (for educational purposes) for fans of a certain band to share the setlists the band has played at their gigs.  Not only does this help the fan feel like part of the bands fanbase, but allows other fans to see what songs the band have been playing live.
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 # UX and Design
 
 ## User Demographics
 
-The target market are individuals who are wanting to find out more about the college to see if they want to enrol. It is not for current students.
+The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community.
 
+[Back to top ⇧](#Setlist-Sharer)
 ## User Stories
 
 | Theme  | Epic | Related User Stories  | MOSCOW |Order | Completed |
@@ -80,7 +81,7 @@ The target market are individuals who are wanting to find out more about the col
 |  		|                               |  #15 View setlist | Must have  |  12 | No | 
 |  	         |                               |  #7  View gigs on homepage | Must have  | 9  | No   |
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 ## Wireframes
 
@@ -144,9 +145,22 @@ Blue was chosen as the main colour for the site. Research had shown that this is
 
 ## Navigation and Header
 
-The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site as this is common practice and is the area where most users eyes will be initially drawn to. It will be 'sticky', meaning it will stay at the top of the users screen even when they scroll the site. This is because the site is a one-page design and it is essential for the user to always be able to navigate the site wherever their current position. When a link is hovered over it becomes underlined to help the user confirm they are about to select the relevant link. The underline remains once selected and the relevant navigation link is highlighted when the site is scrolled.
+The navigation bar allows the user to easily select which area of the site they wish to view. It will be located at the top of the site as this is common practice and is the area where most users eyes will be initially drawn to. It will be not be'sticky', as the main links a user will need when scrolling are provided. When a link is hovered over it becomes highlighted to help the user confirm they are about to select the relevant link. The highlight remains once selected.
 
-The 'hamburger' icon was not used on small screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this would reveal the navigation in a dropdown menu). This is often done due to the limited real estate space making the text hard to read when the screen is this size. However, this design was not used to make the site more easy to navigate for all users. Furthermore, the navigation only contains three links, so they have the space to remain next to each other still on small screens without causing accessibility and design issues. However, the logo will be centered and the navigation drop below at a particular screen width.
+The 'hamburger' icon was used on small screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
+
+<img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Header at full screen">
+The logo is displayed on the left hand side and the nav on the right.
+
+
+
+If the user is logged in the navigation displys the following links for Home and Logout:
+
+<!-- ADD IMAGE OF  -->
+
+If the user is not logged in the navigation displys the following links for Home and Sign Up and Login:
+
+<!-- ADD IMAGE OF  -->
 
 <img src="assets/images/readme/header-large.jpg"  alt="Header at full screen">
 
@@ -155,7 +169,7 @@ The 'hamburger' icon was not used on small screens (where the navigation bar wil
 
 ## Hero Image
 
-An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.
+An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
 
 <img src="assets/images/index/class.jpg"  alt="The hero image">
 
@@ -163,7 +177,13 @@ An eye-catching full screen image is placed under the navigation. This helps gra
 
 ## About Information Box
 
-A small box containing introductory information is placed below the hero image. This is eye-catching and quickly confirms to the user that they are on the correct site. It offers general information on the college, so users quickly get a feel for its achievements.
+A small box containing introductory information is placed below the hero image.
+
+
+
+
+
+ This is eye-catching and quickly confirms to the user that they are on the correct site. It offers general information on the college, so users quickly get a feel for its achievements.
 
 <img src="assets/images/readme/about-box.jpg"  alt="The About information box">
 
