@@ -176,17 +176,37 @@ An eye-catching full screen image is placed under the navigation. This helps gra
 
 ## About Information Box
 
-A small box containing introductory information is placed below the hero image.
+A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the sites pupose, so they understand its goal.
 
-
-
-
-
- This is eye-catching and quickly confirms to the user that they are on the correct site. It offers general information on the college, so users quickly get a feel for its achievements.
-
-<img src="assets/images/readme/about-box.jpg"  alt="The About information box">
 
 [Back to top ⇧](#Hull-College)
+
+## Gigs
+All the gigs the admin has entered are shown on the hopme page with their date, venue and city.
+
+Below the gig info an image is displayed with two buttons opposite.
+
+<img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
+
+## Setlists
+If a setlist has not yet been submitted, the user can create one to submit by clicking on the Add Setlist button.
+
+If a setlist has been submitted but not yet confirmed this is shown to the user.
+
+If a setlist have been confirmed by the site admin they can be viewed by clicking on the View Setlist button.
+
+## Photos
+If a photo has not yet been submitted, the user can create one to submit one clicking on the Add Photo button.
+
+If a photo has been submitted but not yet confirmed this is shown to the user.
+
+If a photo have been confirmed by the site admin they are displayed on the home page.
+
+
+
+
+
+
 
 ## Award Winning and Student Satisfaction
 
