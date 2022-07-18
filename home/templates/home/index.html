@@ -34,7 +34,7 @@
                     <div class="row col-12">
                         {% if gig.setlist_gig.status == 1 %}
                         <div class="text-center">
-                            <i class="fa-solid fa-rotate"></i>SETLIST WAITING CONFIRMATION
+                            <i class="fa-solid fa-rotate pe-1"></i>Setlist Waiting Confirmation
                         </div>
                         {% elif gig.setlist_gig.status == 2 %}
                         <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
@@ -51,7 +51,7 @@
                             <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
                         {% elif gig.image_status == 1 %}
                         <div class="text-center">
-                            <i class="fa-solid fa-rotate pe-1"></i>IMG WAITING CONFIRMATION 
+                            <i class="fa-solid fa-rotate pe-1"></i>Photo Waiting Confirmation 
                         </div>
                         {% else %}
                         <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">

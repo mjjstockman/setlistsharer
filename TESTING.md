@@ -1,45 +1,5 @@
-# Setlist Sharer
+# Setlist Sharer Testing
 
-<img  src="assets/images/readme/amiresponsive.jpg"  alt="Mockup of the Hull College website on a phone, tablet, laptop and monitor screen">
-
-*Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
-
-[View the live project here](https://mjjstockman.github.io/hull-college).
-
----
-
-## Table of contents
-
-1. [Introduction](#Introduction)
-2. [UX and Design](#UX-and-design)
-   - [User Demographics](#User-Demographics)
-   - [User Stories](#User-Stories)
-   - [Wireframes](#Wireframes)
-   - [Database Design](#Database-design) ADD ERD AND EXPLANTION
-   - [Kanban](#Kanban) ADD LINK AND EXPLANATION
-   - [Changes to the design throughout development](#Changes-to-the-design-throughout-development)
-   - [Colour Scheme](#Colour-Scheme)
-   - [Typography](#typography)
-3. [Features](#Features)
-   - [Navigation and Header](#Navigation-and-Header)
-   - [Hero Image](#Hero-Image)
-   - [About Information Box](#About-Information-Box)
-   - [Award Winning and Student Satisfaction](#Award-Winning-and-Student-Satisfaction)
-   - [About Information Box](#About-Information-Box)
-   - [Courses Section](#Courses-Section)
-   - [Contact Section](#Contact-Section)
-   - [Footer](#Footer)
-4. [Future Features](#Features-to-Implement-in-the-future)
-5. [Testing](#Testing)
-6. [Deployment](#Deployment)
-   - [How the site was Deployed](#How-the-site-was-Deployed)
-   - [How to Fork the Repository](#How-to-Fork-the-Repository)
-   - [How to create a Clone](#How-to-create-a-Clone-using-SSH)
-7. [Credits](#Credits)
-   - [Images](#Images)
-   - [Acknowledgements](#Acknowledgements)
-
----
 
 # Introduction
 
