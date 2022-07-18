@@ -21,6 +21,9 @@
         </p>
     {% endfor %}
     {% if user.id == setlist.author.id %}
+    <a href="{% url 'edit_setlist' setlist.id %}" class="btn btn-outline-dark mb-2 main-btn">
+    <i class="fa-solid fa-file pe-1"></i>Edit Setlist</a>
+
         <a href="{% url 'edit_setlist' setlist.id %}">EDIT</a>
         <a href="{% url 'delete_setlist' setlist.id %}">DELETE</a>
     {% else %}
