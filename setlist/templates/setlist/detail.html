@@ -26,13 +26,12 @@
 
     <a href="{% url 'delete_setlist' setlist.id %}" class="btn btn-outline-dark mb-2 main-btn">
         <i class="fa-solid fa-file pe-1"></i>Delete Setlist</a>
+        <a href="{% url 'delete_setlist' setlist.id %}">DELETE</a>
     {% else %}
     <form action="{% url 'agree' setlist.pk %}" method="POST">
         {% csrf_token %}
             <input type="hidden" name="next" value=" {{ request.path }}">
-            <a href="{% url 'agree' setlist.pk %}" class="btn btn-outline-dark mb-2 main-btn">
-                <i class="fa-solid fa-file pe-1"></i>Agree with Setlist</a>
-            <!-- <button type="submit", name="setlist_id", value="{{ setlist.id }}">Agree</button> -->
+            <button type="submit", name="setlist_id", value="{{ setlist.id }}">Agree</button>
         </form>
         Argeed by {{ setlist.agree.all.count }} number of users.
         <form action="{% url 'disagree' setlist.pk %}" method="POST">
