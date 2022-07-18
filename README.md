@@ -149,20 +149,19 @@ The navigation bar allows the user to easily select which area of the site they 
 
 The 'hamburger' icon was used on small screens (where the navigation bar will collapse and be represented as three horizontal lines. When touched/clicked, this displays the navigation in a dropdown menu). This is done due to the limited real estate space making the text hard to read when the screen is this size.
 
-<img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Header at full screen">
+<img src="docs/readme_images/features/nav/nav-hamburger.png"  alt="Nav at mobile size showing the hamburger icon">
+
 The logo is displayed on the left hand side and the nav on the right.
 
-
-
 If the user is logged in the navigation displys the following links for Home and Logout:
+<img src="docs/readme_images/features/nav/nav-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
 
-<!-- ADD IMAGE OF  -->
 
 If the user is not logged in the navigation displys the following links for Home and Sign Up and Login:
 
-<!-- ADD IMAGE OF  -->
+<img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
 
-<img src="assets/images/readme/header-large.jpg"  alt="Header at full screen">
+<!-- <img src="assets/images/readme/header-large.jpg"  alt="Header at full screen"> -->
 
 
 [Back to top ⇧](#Hull-College)
@@ -171,7 +170,7 @@ If the user is not logged in the navigation displys the following links for Home
 
 An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
 
-<img src="assets/images/index/class.jpg"  alt="The hero image">
+<img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
 
 [Back to top ⇧](#Hull-College)
 
