@@ -30,8 +30,8 @@
     {% else %}
     <form action="{% url 'agree' setlist.pk %}" method="POST">
         {% csrf_token %}
-            <input type="hidden" name="next" value=" {{ request.path }}">
             <button type="submit", name="setlist_id", value="{{ setlist.id }}">Agree</button>
+            <input type="hidden" name="next" value=" {{ request.path }}">
         </form>
         Argeed by {{ setlist.agree.all.count }} number of users.
         <form action="{% url 'disagree' setlist.pk %}" method="POST">
