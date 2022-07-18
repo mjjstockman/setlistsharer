@@ -8,7 +8,7 @@
     <p>The following songs were played:</p>
 
     {% for song in setlist.song.all %}
-        {{ song.title }} from
+        <p>{{ song.title }} from
         {% for release in song.releases.all %}
             {% if forloop.first %}
                 {{ release }}
@@ -18,6 +18,7 @@
                 {{ release }},
             {% endif %}
         {% endfor %}
+        </p>
     {% endfor %}
     {% if user.id == setlist.author.id %}
         <a href="{% url 'edit_setlist' setlist.id %}">EDIT</a>
