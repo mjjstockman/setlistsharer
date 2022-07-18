@@ -37,24 +37,24 @@
                             <i class="fa-solid fa-rotate"></i>SETLIST WAITING CONFIRMATION
                         </div>
                         {% elif gig.setlist_gig.status == 2 %}
-                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-file pe-1"></i>View Setlist</a>
                         {% else %}
-                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-file-circle-plus pe-1"></i>Add Setlist</a>
                         {% endif %}
                     </div>
 
                     <div class="row col-12">
                         {% if gig.image_status == 0 %}
-                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
                         {% elif gig.image_status == 1 %}
                         <div class="text-center">
                             <i class="fa-solid fa-rotate pe-1"></i>IMG WAITING CONFIRMATION 
                         </div>
                         {% else %}
-                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 gig-btn">
+                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-camera pe-1"></i>View Photo</a>
                         {% endif %}
                     </div>
