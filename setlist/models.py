@@ -4,7 +4,6 @@ from datetime import date
 from cloudinary.models import CloudinaryField
 
 # Create your models here.
-# STATUS = ((0, 'Waiting Confirmation'), (1, 'Published'))
 STATUS = ((0, 'No Setlist'), (1, 'Waiting Confirmation'), (2, 'Published'))
 
 class Venue(models.Model):
@@ -17,7 +16,7 @@ class Venue(models.Model):
 
 class Song(models.Model):
     title = models.CharField(max_length=200, unique=True, null=False)
-    # slug = models.SlugField(max_length=200, unique=True, null=True)
+
 
     def __str__(self):
         return self.title
@@ -26,7 +25,7 @@ class Song(models.Model):
 class Release(models.Model):
     title = models.CharField(max_length=200)
     songs = models.ManyToManyField(Song, related_name="releases")
-    # slug = models.SlugField(max_length=200, unique=True, null=True)
+
 
     def __str__(self):
         return self.title

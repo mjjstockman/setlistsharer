@@ -11,31 +11,32 @@
 ## Table of contents
 
 1. [Introduction](#Introduction)
-2. [UX and Design](#UX-and-design)
+2. [Admin Setup](#Admin-Setup)
+3. [UX and Design](#UX-and-design)
    - [User Demographics](#User-Demographics)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
    - [Database Design](#Database-design) ADD ERD AND EXPLANTION
-   - [Kanban](#Kanban) ADD LINK AND EXPLANATION
+   - [Kanban](#Kanban) 
    - [Changes to the design throughout development](#Changes-to-the-design-throughout-development)
-   - [Colour Scheme](#Colour-Scheme)
    - [Typography](#typography)
-3. [Features](#Features)
+4. [Features](#Features)
    - [Navigation and Header](#Navigation-and-Header)
    - [Hero Image](#Hero-Image)
    - [About Information Box](#About-Information-Box)
-   - [Award Winning and Student Satisfaction](#Award-Winning-and-Student-Satisfaction)
-   - [About Information Box](#About-Information-Box)
-   - [Courses Section](#Courses-Section)
-   - [Contact Section](#Contact-Section)
+   - [Gigs](#Gigs)
+   - [Setlists](#Setlists)
+   - [Photos](#Photos)
    - [Footer](#Footer)
-4. [Future Features](#Features-to-Implement-in-the-future)
-5. [Testing](#Testing)
-6. [Deployment](#Deployment)
+5. [Future Features](#Features-to-Implement-in-the-future)
+6. [Testing](#Testing)
+7. [Deployment](#Deployment)
    - [How the site was Deployed](#How-the-site-was-Deployed)
    - [How to Fork the Repository](#How-to-Fork-the-Repository)
    - [How to create a Clone](#How-to-create-a-Clone-using-SSH)
-7. [Credits](#Credits)
+   - [Heroku](#How-to-create-a-Clone-using-SSH)
+   - [Heroku](#How-to-create-a-Clone-using-SSH)
+8. [Credits](#Credits)
    - [Images](#Images)
    - [Acknowledgements](#Acknowledgements)
 
@@ -47,6 +48,29 @@ This is a fictional website (for educational purposes) for fans of a certain ban
 
 [Back to top ⇧](#Setlist-Sharer)
 
+# Admin Setup
+
+Before the site can be used the admin will set up the required fields in the database, using the admin pannel in the following order:
+
+1. Venues
+
+The name of the Venue and the City.
+
+2. Gigs
+
+Once Venues have been entered the Gig Date and Venue can be added.  The Image selection will be left blank and the Image Status will be automatically set to "No Image".  When a user submits an image the status changes to 1.
+
+3. Songs
+
+The name of the bands song should then be entered.
+
+4. Releases
+
+The titles of the bands releases (this could be the name of a Single, EP, Album, Demo etc).  A song can appear on multiple releases and are selected whilst entering releases.
+
+# Once Deployed
+Once the site is in use the admin can change the status of submitted Setlists or Photos.  When they are set to "Published" they will be included in the site.
+
 # UX and Design
 
 ## User Demographics
@@ -55,6 +79,10 @@ The target market are fans of the particular band, especially those who are want
 
 [Back to top ⇧](#Setlist-Sharer)
 ## User Stories
+
+User Stories were added to the Git Hub project board and can be read from [here](https://github.com/mjjstockman/setlistsharer/issues)
+
+A kanban was used to keep an agile view on user stories.  Below is an example of the kanban at a particular set of time.
 
 | Theme  | Epic | Related User Stories  | MOSCOW |Order | Completed |
 |--|--|--|--|--|--|
@@ -85,12 +113,15 @@ The target market are fans of the particular band, especially those who are want
 
 ## Wireframes
 
-| Page | Small screens | Medium screens | Largescreens |
-| --------------| -------------- | ------------ |  ------------ |
-| Home |<img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of the home page on a small screen"> | ADD LINK | ADDLINK |
-| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_author.jpg"  alt="Wireframe of the setlist detail page as author on a small screen"> | ADD LINK | ADDLINK |
-| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_not_author.jpg"  alt="Wireframe of the setlist add page on a small screen"> |  ADD LINK | ADDLINK |
-| Setlist/add |<img  src="docs/readme_images/wireframes/small/setlist_add/setlist_add.jpg"  alt="Wireframe of the setlist add page on a small screen"> | ADD LINK | ADDLINK |
+| Page | Image | 
+| --------------| -------------- | 
+| Home |<img  src="docs/readme_images/wireframes/small/index/home.jpg"  alt="Wireframe of the home page on a small screen"> 
+| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_author.jpg"  alt="Wireframe of the setlist detail page as author on a small screen"> 
+| Setlist/detail |<img  src="docs/readme_images/wireframes/small/setlist-detail/setlist_detail_not_author.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
+| Setlist/add |<img  src="docs/readme_images/wireframes/small/setlist_add/setlist_add.jpg"  alt="Wireframe of the setlist add page on a small screen"> 
+
+
+Wireframes were being made for other screen sizes, but throught development it became clear that the design would be suitable across screen sizes, so the designs were scrapped.
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
@@ -101,36 +132,13 @@ The target market are fans of the particular band, especially those who are want
 
 ## Changes to the design throughout development
 
-The original design was slightly different to the above wireframes. The following particulars were changed during implementation to better the user experience and aesthetics:
+The design for the small sized screens were kept for all sizes.  
 
-The header was changed so that the logo was centered and the navigation drops underneath when the screen is reduced to a particular size. This meant that the navigation links did not get too close together.
-
-Form labels were moved above their inputs, placeholders removed and all inputs and the submit button were stacked and the same width.
-
-A map showing the colleges location was added to the contact section.
+The home app was created to seperate some of the logic.  This is possibly not the best design to use but was done so to see how this would be implemented.  Another app called addimage was used to increase future usability in different apps, but this was not fully realised.  
 
 [Back to top ⇧](#Hull-College)
 
-## Colour Scheme
 
-Blue was chosen as the main colour for the site. Research had shown that this is a colour associated with reliability, productivity, trust and order, which are the principles the college wish to promote.
-
-[Coolors](https://coolors.co/) was then used to find a mix of blues for the main colour palette, with the following decided upon:
-
-- Header: #03045e ![#f03c15](https://via.placeholder.com/15/03045e/000000?text=+)
-- About: #caf0f8 ![#caf0f8](https://via.placeholder.com/15/caf0f8/000000?text=+)
-- Courses: #90e0ef ![#90e0ef](https://via.placeholder.com/15/90e0ef/000000?text=+)
-- Contact: #00b4d8 ![##00b4d8](https://via.placeholder.com/15/00b4d8/000000?text=+)
-- Footer: #0077b6 ![#0077b6](https://via.placeholder.com/15/0077b6/000000?text=+)
-
-<img  src="assets/images/readme/blue-colours.jpg"  alt="Blue colour scheme from Coolors.co">
-
-- Main text: #12130f ![#12130f](https://via.placeholder.com/15/12130f/000000?text=+)
-- Navigation and footer text/icons: #fffafa ![#fffafa](https://via.placeholder.com/15/fffafa/000000?text=+)
-- Accent color: #800080 ![#800080](https://via.placeholder.com/15/800080/000000?text=+)
-- Submit button: #faf482 ![#faf482](https://via.placeholder.com/15/faf482/000000?text=+)
-
-[Back to top ⇧](#Hull-College)
 
 ## Typography
 
@@ -161,7 +169,6 @@ If the user is not logged in the navigation displys the following links for Home
 
 <img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
 
-<!-- <img src="assets/images/readme/header-large.jpg"  alt="Header at full screen"> -->
 
 
 [Back to top ⇧](#Hull-College)
@@ -212,21 +219,24 @@ If a photo have been confirmed by the site admin they are displayed on the home 
 
 ## Footer
 
-The footer feature at the bottom of the page contains links to Hull Colleges social media links. This will help users find more information and stay up to date with the college. The links open in a new tab, so users are not taken away from Hull College's website. They are the same colour as those in the navigation for consistency and to help them stand out.
+The footer feature at the bottom of the page lets users know who it was developed by.
 
-<img src="assets/images/readme/footer.jpg"  alt="Footer section">
 
 [Back to top ⇧](#Hull-College)
 
 # Features to Implement in the future
 
-Add a dropdown to each course in the Courses section containing information on the course.
+Allow the order of songs played to be submitted and displayed.
 
-Add script to dynamically display how many characters are left for the form textarea.
+Fully implement automated testing.
 
-Remove inline JavaScript in index.html into a separate script folder.  This was not done as it was outside the scope of the project.
+Combine the agree / disagree logic for setlists.
  
-The active navigation highlighting does not always work correctly on scroll.  This feature was not fixed as the use of JavaScript is outside the scope of the project.
+Automatically email the admin when a new setlist or photo has been selected.
+
+Allow the user to delete a photo they have submitted.
+
+Correctly seperate the project into seperate apps for reusability.  This was attempted (seperating adding an image and home etc. into their own models) but not fully realised due to time constraints.  Prefably, the addimage (and possibly the home app) models, views etc should have been moved back into the setlist app.
 
 # Technologies Used
 
@@ -423,25 +433,9 @@ Click on the Open app button to open the project
 
 [Back to top ⇧](#Setlist-sharer)
 
-
-# Admin Setup
-
-Before the site can be used the admin will set up the required fields in the database, using the admin pannel in the following order:
-
-## Venues
-The name of the Venue and the City.
-
-## Gigs
-Once Venues have been entered the Gig Date and Venue can be added.  The Image selection will be left blank and the Image Status will be automatically set to "No Image".  When a user submits an image the status changes to 1.
-
-## Songs
-The name of the bands song should then be entered.
-
-## Releases
-The titles of the bands releases (this could be the name of a Single, EP, Album, Demo etc).  A song can appear on multiple releases and are selected whilst entering releases.
-
-# Once Deployed
-Once the site is in use the admin can change the status of submitted Setlists or Photos.  When they are set to "Published" they will be included in the site.
+# Google Authentification
+In order to allow users to register and login using Google.
+See [here](https://www.section.io/engineering-education/django-google-oauth/) for detailed instructions.
 
 # Credits
 
