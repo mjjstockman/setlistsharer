@@ -432,13 +432,16 @@ Before the site can be used the admin will set up the required fields in the dat
 The name of the Venue and the City.
 
 ## Gigs
-Once Venues have been entered the Gig Date and Venue can be added.  The Image selection will be left blank and the Image Status will be automatically set to "No Image"
+Once Venues have been entered the Gig Date and Venue can be added.  The Image selection will be left blank and the Image Status will be automatically set to "No Image".  When a user submits an image the status changes to 1.
 
 ## Songs
 The name of the bands song should then be entered.
 
 ## Releases
 The titles of the bands releases (this could be the name of a Single, EP, Album, Demo etc).  A song can appear on multiple releases and are selected whilst entering releases.
+
+# Once Deployed
+Once the site is in use the admin can change the status of submitted Setlists or Photos.  When they are set to "Published" they will be included in the site.
 
 # Credits
 

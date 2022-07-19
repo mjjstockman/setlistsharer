@@ -17,8 +17,8 @@
         <h1 class="text-center">Gigs</h1>
         <hr> 
         {% for gig in gigs %}
-            <div class="text-center">
-                {{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}
+            <div class="text-center m-1">
+                <h2>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</h2>
             </div>
             
             <div class="row">
@@ -50,12 +50,9 @@
                         <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
                         {% elif gig.image_status == 1 %}
-                        <div class="text-center">
-                            <i class="fa-solid fa-rotate pe-1"></i>Photo Waiting Confirmation 
-                        </div>
-                        {% else %}
-                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
-                            <i class="fa-solid fa-camera pe-1"></i>View Photo</a>
+                            <div class="text-center">
+                                <i class="fa-solid fa-rotate pe-1"></i>Photo Waiting Confirmation 
+                            </div>
                         {% endif %}
                     </div>
                 </div>

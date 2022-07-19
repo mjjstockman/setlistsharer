@@ -5,12 +5,11 @@ from home.models import Gig
 from .forms import AddImageForm
 
 
-# Create your views here.
 
 @login_required
 def add_image(request, pk):
     gig = Gig.objects.get(id=pk)
-    # form = EditForm(instance=setlist)
+
     
     form = AddImageForm(request.POST, request.FILES, instance=gig)
     if request.method == 'POST':
