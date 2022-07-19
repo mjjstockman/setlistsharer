@@ -9,6 +9,8 @@ from .models import Setlist
 
 @login_required
 def add(request, pk):
+    """Adds a setlist to the database for the admin to consider
+    """
     gig = Gig.objects.get(id=pk)
     author = request.user
     initial = {
@@ -31,6 +33,8 @@ def add(request, pk):
 
 @login_required
 def edit(request, pk):
+    """Allows authors to edit their setlists
+    """
     setlist = Setlist.objects.get(id=pk)
     form = SetlistEditForm(instance=setlist)
 
@@ -48,6 +52,8 @@ def edit(request, pk):
 
 @login_required
 def detail(request, pk):
+    """View setlist details
+    """
     setlist = Setlist.objects.get(id=pk)
     context = {
         'setlist': setlist,
@@ -57,6 +63,8 @@ def detail(request, pk):
 
 @login_required
 def delete(request, pk):
+    """Allows the setlist author to delete the setlist
+    """
     setlist = Setlist.objects.get(id=pk)
 
     if request.method == 'POST':
@@ -71,6 +79,10 @@ def delete(request, pk):
 
 @login_required
 def agree(request, pk):
+    """A user can agree with a setlist
+
+    TODO: merge agree/disagree logic 
+    """
     setlist = Setlist.objects.get(id=pk)
     disagree = False
 
@@ -100,6 +112,10 @@ def agree(request, pk):
 
 @login_required
 def disagree(request, pk):
+    """A user can disagree with a setlist
+
+    TODO: merge agree/disagree logic 
+    """
     setlist = get_object_or_404(Setlist, id=request.POST.get('setlist_id'))
 
     agree = False
