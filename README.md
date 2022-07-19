@@ -424,7 +424,21 @@ Click on the Open app button to open the project
 [Back to top ⇧](#Setlist-sharer)
 
 
+# Admin Setup
 
+Before the site can be used the admin will set up the required fields in the database, using the admin pannel in the following order:
+
+## Venues
+The name of the Venue and the City.
+
+## Gigs
+Once Venues have been entered the Gig Date and Venue can be added.  The Image selection will be left blank and the Image Status will be automatically set to "No Image"
+
+## Songs
+The name of the bands song should then be entered.
+
+## Releases
+The titles of the bands releases (this could be the name of a Single, EP, Album, Demo etc).  A song can appear on multiple releases and are selected whilst entering releases.
 
 # Credits
 
