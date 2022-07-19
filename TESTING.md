@@ -1,9 +1,63 @@
 # Setlist Sharer Testing
 
 
-# Introduction
+# Automatic Testing
+The urls were automatically tested in the TestUrls test case class within setlists/tests.py and confirn that the correct urls are being called.
+
+<img src="docs/testing-images/testUrls.png">
+
+Progress was made on further manual tests, but due to time constraints were scrapped.  The beginings of this can be viewed below, where the necessary objects were initialy created for the tests.
+
+<img src="docs/testing-images/testViews.png">
+
+
+# Manual Testing
+
+A lot of the funcionaity from this site comes from the admin set up (admin adding Songs, Releases, Gigs etc) before the site can be used.  As this is provided through Django this does not need to be tested.  The accounts side of the site (Signup, Login etc) is implemented through Allauth, which again does not need to be tested.
+
+However, the following has been tested manualy:
+
+## Home Page Gig Buttons
+There are numerous options for the Gig Buttons on the home page. 
+
+### Gigs with no Setlist
+Those without a setlist have the Add Setlist button displayed next to them:
+
+<img src="docs/testing-images/addListandPhoto.png">
+
+### Gigs with a Setlist awaiting Confirmation
+Those that have had a setlist submitted, but not yet published by the site admin show that it is Waiting Confirmation:
+
+<img src="docs/testing-images/listWait.png">
+
+### Gigs with a Published Setlist
+Gigs with a published Setlist have the View Setlist button displayed:
+
+<img src="docs/testing-images/viewList.png">
+
+### Gigs with no Photo
+Such gigs have the Add Photo button displayed next to them:
+
+<img src="docs/testing-images/addListandPhoto.png">
+
+### Gigs with a Photo awaiting Confirmation
+Those that have had a photo submitted, but not yet published by the site admin show that it is Waiting Confirmation:
+
+<img src="docs/testing-images/photoWait.png">
+
+### Gigs with a Published Photo
+No Photo button is displayed, but the image is shown:
+
+
+
+
+## Edit / Delete a Setlist
+
+## Agree / Disagree with a Setlist
 
 This is a fictional website (for educational purposes) for fans of a certain band to share the setlists the band has played at their gigs.  Not only does this help the fan feel like part of the bands fanbase, but allows other fans to see what songs the band have been playing live.
+
+
 
 [Back to top ⇧](#Setlist-Sharer)
 
