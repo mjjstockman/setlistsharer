@@ -4,13 +4,8 @@
 
 {% load cloudinary %}
 <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Submit Image</button>
-    
+{% csrf_token %}
+{{ form }}
+<button type="submit">Submit Image</button>
 </form>
-
-
-<!-- {{ form }} -->
-
 {% endblock %}

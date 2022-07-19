@@ -8,16 +8,16 @@ from .views import add, edit, detail, delete, agree, disagree
 from .models import Venue, Song, Release, Setlist
 
 
-class TestUrls(TestCase):   
+class TestUrls(TestCase):
 
     def test_add(self):
         url = reverse('add_setlist', args=[1])
         self.assertEqual(resolve(url).func, add)
-        
+
     def test_edit(self):
         url = reverse('edit_setlist', args=[1])
         self.assertEqual(resolve(url).func, edit)
-  
+
     def test_detail(self):
         url = reverse('delete_setlist', args=[1])
         self.assertEqual(resolve(url).func, delete)
@@ -30,8 +30,8 @@ class TestUrls(TestCase):
         url = reverse('disagree', args=[1])
         self.assertEqual(resolve(url).func, disagree)
 
-class TestViews(TestCase):
 
+class TestViews(TestCase):
     def test_setlist_detail(self):
 
         venue1 = Venue.objects.create(
@@ -42,11 +42,11 @@ class TestViews(TestCase):
         song1 = Song.objects.create(
             title='A Title',
         )
-        
+
         release1 = Release.objects.create(
             title='An Album',
         )
-        
+
         gig1=Gig.objects.create(
             date=datetime.now()
         )

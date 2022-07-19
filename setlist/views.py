@@ -8,7 +8,7 @@ from .models import Setlist
 
 
 @login_required
-def add(request, pk):  
+def add(request, pk):
     gig = Gig.objects.get(id=pk)
     author = request.user
     initial = {
@@ -42,7 +42,7 @@ def edit(request, pk):
 
     context = {
         'form': form,
-    }    
+    }
     return render(request, 'setlist/add.html', context)
 
 
@@ -62,7 +62,7 @@ def delete(request, pk):
     if request.method == 'POST':
         setlist.delete()
         return redirect('/')
-        
+
     context = {
         'setlist': setlist,
     }
@@ -88,7 +88,7 @@ def agree(request, pk):
         if agree == request.user:
             agree = True
             break
-        
+
     if not agree:
         setlist.agree.add(request.user)
 
@@ -118,11 +118,10 @@ def disagree(request, pk):
         if disagree == request.user:
             disagree = True
             break
-        
+
     if not disagree:
         setlist.disagree.add(request.user)
 
-    # change to else??
     if disagree:
         setlist.disagree.remove(request.user)
 

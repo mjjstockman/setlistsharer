@@ -2,7 +2,7 @@ import random
 from django.shortcuts import render
 from setlist.models import Setlist
 from .models import Gig
-# from .forms import 
+
 
 # Create your views here.
 
@@ -14,4 +14,5 @@ def gigs(request):
         'image_num': image_num
     }
     return render(request, 'home/index.html', context)
+
 

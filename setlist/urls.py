@@ -1,11 +1,9 @@
-# from django.contrib import admin
 from django.urls import path
 from addimage.views import add_image
 from .views import add, edit, detail, delete, agree, disagree
 
 
 urlpatterns = [
-    # path('', get_setlists, name='setlist'),
     path('add/<str:pk>/', add, name='add_setlist'),
     path('edit/<str:pk>/', edit, name='edit_setlist'),
     path('detail/<str:pk>/', detail, name='detail_setlist'),
@@ -14,3 +12,4 @@ urlpatterns = [
     path('disagree/<str:pk>/', disagree, name='disagree'),
     path('add-image/<str:pk>/', add_image, name='add_image'),
 ]
+

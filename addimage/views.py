@@ -5,12 +5,10 @@ from home.models import Gig
 from .forms import AddImageForm
 
 
-
 @login_required
 def add_image(request, pk):
     gig = Gig.objects.get(id=pk)
 
-    
     form = AddImageForm(request.POST, request.FILES, instance=gig)
     if request.method == 'POST':
         if form.is_valid():
@@ -22,3 +20,4 @@ def add_image(request, pk):
         'form': form,
     }
     return render(request, 'addimage/add-image.html', context)
+    
