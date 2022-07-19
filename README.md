@@ -16,7 +16,7 @@
    - [User Demographics](#User-Demographics)
    - [User Stories](#User-Stories)
    - [Wireframes](#Wireframes)
-   - [Database Design](#Database-design) ADD ERD AND EXPLANTION
+   - [Database Design](#Database-design) 
    - [Kanban](#Kanban) 
    - [Changes to the design throughout development](#Changes-to-the-design-throughout-development)
    - [Typography](#typography)
@@ -74,6 +74,8 @@ Once the site is in use the admin can change the status of submitted Setlists or
 
 # UX and Design
 
+[Back to top ⇧](#Setlist-Sharer)
+
 ## User Demographics
 
 The target market are fans of the particular band, especially those who are wanting to feel conected to the band and part of their community.
@@ -126,7 +128,7 @@ Wireframes were being made for other screen sizes, but throught development it b
 
 *Images created and taken from [Balsamiq](https://balsamiq.com/wireframes)*
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 ## Database Design
 <img  src="docs/readme_images/general/ERD.jpg"  alt="Entity Relationship Diagram">
@@ -137,7 +139,7 @@ The design for the small sized screens were kept for all sizes.
 
 The home app was created to seperate some of the logic.  This is possibly not the best design to use but was done so to see how this would be implemented.  Another app called addimage was used to increase future usability in different apps, but this was not fully realised.  
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 
 
@@ -148,7 +150,7 @@ The home app was created to seperate some of the logic.  This is possibly not th
 - Headings: Open Sans, with a fallback of serif. 
 - Body: Crimson Text, with a fallback of sans-serif.
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 # Features
 
@@ -171,23 +173,20 @@ If the user is not logged in the navigation displys the following links for Home
 <img src="docs/readme_images/features/nav/nav-not-loggedin.png"  alt="Nav at mobile size showing the hamburger icon">
 
 
-
-[Back to top ⇧](#Hull-College)
-
+[Back to top ⇧](#Setlist-Sharer)
 ## Hero Image
 
 An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
 
 <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 ## About Information Box
 
 A small section containing introductory information is placed below the hero image. This helps to quickly confirm to the user that they are on the correct site. It offers general information on the sites pupose, so they understand its goal.
 
-
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 ## Gigs
 All the gigs the admin has entered are shown on the hopme page with their date, venue and city.
@@ -195,6 +194,8 @@ All the gigs the admin has entered are shown on the hopme page with their date, 
 Below the gig info an image is displayed with two buttons opposite.
 
 <img src="docs/readme_images/features/gigs/gig-and-btns.png"  alt="Nav at mobile size showing the hamburger icon">
+
+[Back to top ⇧](#Setlist-Sharer)
 
 ## Setlists
 If a setlist has not yet been submitted, the user can create one to submit by clicking on the Add Setlist button.
@@ -207,6 +208,8 @@ If the author of a setlist is signed in they can edit or delete the setlist.
 
 If the logged in user is not the author of the setlist they can agree or disagree with it by clicking on the appropriate button in the setlist detail page.
 
+[Back to top ⇧](#Setlist-Sharer)
+
 ## Photos
 If a photo has not yet been submitted, the user can create one to submit one clicking on the Add Photo button.
 
@@ -215,15 +218,14 @@ If a photo has been submitted but not yet confirmed this is shown to the user.
 If a photo have been confirmed by the site admin they are displayed on the home page.
 
 
-
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 ## Footer
 
 The footer feature at the bottom of the page lets users know who it was developed by.
 
 
-[Back to top ⇧](#Hull-College)
+[Back to top ⇧](#Setlist-Sharer)
 
 # Features to Implement in the future
 
@@ -239,12 +241,7 @@ Allow the user to delete a photo they have submitted.
 
 Correctly seperate the project into seperate apps for reusability.  This was attempted (seperating adding an image and home etc. into their own models) but not fully realised due to time constraints.  Prefably, the addimage (and possibly the home app) models, views etc should have been moved back into the setlist app.
 
-# Technologies Used
-
-## Main Languages Used
-
-- HTML
-- CSS
+[Back to top ⇧](#Setlist-Sharer)
 
 
 # Testing
@@ -262,6 +259,7 @@ Active pages were not being highlighted properly in the nav.  This was due to th
 ## Remaining Bugs
 The hero div is not resizing on larger screens.
 
+[Back to top ⇧](#Setlist-Sharer)
 
 # Deployment
 
@@ -453,28 +451,19 @@ See [here](https://www.section.io/engineering-education/django-google-oauth/) fo
 Many thanks to the following which were used throughout the creation of this site:
 
 - [w3c Markup Validator](https://validator.w3.org)
-- [Adobe Stock Image](https://stock.adobe.com)
 - [Am I Responsive?](http://ami.responsivedesign.is)
 - [Balsamiq](https://balsamiq.com/)
 - [Coolors](https://coolors.co/)
 - [Design Course tutorial](https://www.youtube.com/watch?v=z9H7p1_iI14)
-- [Embed My Map](https://www.embedmymap.com/)
 - [Favicon.io](https://favicon.io)
 - [Font Awesome](https://fontawesome.com)
 - [Free Formatter](https://www.freeformatter.com/)
 - [Google Fonts](https://fonts.google.com)
 - [Git](https://git-scm.com)
 - [GitHub](https://github.com)
-- [Json Formatter](https://jsonformatter.org/markdown-formatter)
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
-- [Looka](https://looka.com/)
-- [Malsu Codepen](https://codepen.io/malsu/pen/VwKzoPG)
 - [Pexels](https://www.pexels.com)
-- [Placeholder.com/](https://placeholder.com)
 - [Responsinator](http://www.responsinator.com)
-- [Squoosh](https://squoosh.app)
 - [Super Cool Design](https://supercooldesign.co.uk/blog/how-to-write-good-alt-text)
-- [TinyPNG](https://tinypng.com)
 - [Typespiration](https://typespiration.com)
 
 
