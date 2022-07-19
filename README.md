@@ -1,6 +1,6 @@
 # Setlist Sharer
 
-<img  src="assets/images/readme/amiresponsive.jpg"  alt="Mockup of the Hull College website on a phone, tablet, laptop and monitor screen">
+<img  src="docs/readme_images/multi-mockup.png"  alt="Mockup of the Setlist Sharer website on a phone, tablet, laptop and monitor screen">
 
 *Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
 
@@ -30,13 +30,14 @@
    - [Footer](#Footer)
 5. [Future Features](#Features-to-Implement-in-the-future)
 6. [Testing](#Testing)
-7. [Deployment](#Deployment)
+7. [Bugs](#Bugs)
+8. [Deployment](#Deployment)
    - [How the site was Deployed](#How-the-site-was-Deployed)
    - [How to Fork the Repository](#How-to-Fork-the-Repository)
    - [How to create a Clone](#How-to-create-a-Clone-using-SSH)
    - [Heroku](#How-to-create-a-Clone-using-SSH)
    - [Heroku](#How-to-create-a-Clone-using-SSH)
-8. [Credits](#Credits)
+9. [Credits](#Credits)
    - [Images](#Images)
    - [Acknowledgements](#Acknowledgements)
 
@@ -251,6 +252,16 @@ Correctly seperate the project into seperate apps for reusability.  This was att
 Details on site testing can be found [here](TESTING.md).
 
 [Back to top ⇧](#Hull-College)
+
+# Bugs
+
+## Bugs found throughout Development
+Active pages were not being highlighted properly in the nav.  This was due to the nav being part of a base template.  The following article helped: https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar
+
+
+## Remaining Bugs
+The hero div is not resizing on larger screens.
+
 
 # Deployment
 
