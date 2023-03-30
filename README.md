@@ -51,7 +51,7 @@ This is a fictional website (for educational purposes) for fans of a certain ban
 
 # Admin Setup
 
-THE FOLLOWING HAS BEEN LEFT IN FOR FINAL DEPLOYMENT SO THE SITE CAN BE USED FROM THE START.  Please not that all images etc are only placeholders
+THE FOLLOWING HAS BEEN LEFT IN FOR FINAL DEPLOYMENT SO THE SITE CAN BE USED FROM THE START.  Please note that all images etc are only placeholders
 and do not represent what will be included when the site is used properly.
 
 Before the site can be used the admin will set up the required fields in the database, using the admin pannel in the following order:
