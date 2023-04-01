@@ -5,19 +5,21 @@
 <div class="container">
     <h1>{{ setlist }}</h1>
 
-    <p>The following songs were played:</p>
+    <h2>The following songs were played:</h2>
 
     {% for song in setlist.song.all %}
-        <p>{{ song.title }} from
-        {% for release in song.releases.all %}
-            {% if forloop.first %}
-                {{ release }}
-            {% elif forloop.last %}
-                and {{ release }}
-            {% else %}
-                {{ release }},
-            {% endif %}
-        {% endfor %}
+        <p>{{ song.title }} 
+            <span class="text-muted">from
+            {% for release in song.releases.all %}
+                {% if forloop.first %}             
+                    {{ release }}
+                {% elif forloop.last %}
+                    and {{ release }}
+                {% else %}
+                    {{ release }},
+                {% endif %}
+            {% endfor %}
+            </span>
         </p>
     {% endfor %}
     {% if user.id == setlist.author.id %}
