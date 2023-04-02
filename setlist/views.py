@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 
 # Create your views here.
 from django.contrib.auth.decorators import login_required
+from django.views import generic, View
+from django.http import HttpResponseRedirect
 from home.views import Gig
 from .forms import SetlistAddForm, SetlistEditForm
 from .models import Setlist
@@ -78,67 +80,84 @@ def delete(request, pk):
 
 
 @login_required
-def agree(request, pk):
-    """A user can agree with a setlist
-
-    TODO: merge agree/disagree logic 
-    """
-    setlist = Setlist.objects.get(id=pk)
-    disagree = False
-
-    for disagree in setlist.disagree.all():
-        if disagree == request.user:
-            disagree = True
-            break
-
-    if disagree:
-        setlist.disagree.remove(request.user)
-
-    agree = False
-
-    for agree in setlist.agree.all():
-        if agree == request.user:
-            agree = True
-            break
-
-    if not agree:
+def like(request, pk):
+    setlist = get_object_or_404(Setlist, id=pk)
+    if setlist.agree.filter(id=request.user.id).exists():
+        setlist.agree.remove(request.user)
+    else:
         setlist.agree.add(request.user)
 
-    if agree:
-        setlist.agree.remove(request.user)
 
-    return redirect(request.META['HTTP_REFERER'])
+    return HttpResponseRedirect(reverse("detail_setlist", args=[pk]))
 
 
-@login_required
-def disagree(request, pk):
-    """A user can disagree with a setlist
+def agree(request, pk):
+    pass
+    # setlist = Setlist.objects.get(id=pk)
 
-    TODO: merge agree/disagree logic 
-    """
-    setlist = get_object_or_404(Setlist, id=request.POST.get('setlist_id'))
+# @login_required
+# def agree(request, pk):
+#     """A user can agree with a setlist
 
-    agree = False
+#     TODO: merge agree/disagree logic 
+#     """
+#     setlist = Setlist.objects.get(id=pk)
+#     disagree = False
 
-    for agree in setlist.agree.all():
-        if agree == request.user:
-            agree = True
-            break
+#     for disagree in setlist.disagree.all():
+#         if disagree == request.user:
+#             disagree = True
+#             break
 
-    if agree:
-        setlist.agree.remove(request.user)
+#     if disagree:
+#         setlist.disagree.remove(request.user)
 
-    disagree = False
+#     agree = False
 
-    for disagree in setlist.disagree.all():
-        if disagree == request.user:
-            disagree = True
-            break
+#     for agree in setlist.agree.all():
+#         if agree == request.user:
+#             agree = True
+#             break
 
-    if not disagree:
-        setlist.disagree.add(request.user)
+#     if not agree:
+#         setlist.agree.add(request.user)
 
-    if disagree:
-        setlist.disagree.remove(request.user)
+#     if agree:
+#         setlist.agree.remove(request.user)
 
-    return redirect(request.META['HTTP_REFERER'])
+#     return redirect(request.META['HTTP_REFERER'])
+
+
+# @login_required
+# def disagree(request, pk):
+#     """A user can disagree with a setlist
+
+#     TODO: merge agree/disagree logic 
+#     """
+#     setlist = get_object_or_404(Setlist, id=request.POST.get('setlist_id'))
+
+#     agree = False
+
+#     for agree in setlist.agree.all():
+#         if agree == request.user:
+#             agree = True
+#             break
+
+#     if agree:
+#         setlist.agree.remove(request.user)
+
+#     disagree = False
+
+#     for disagree in setlist.disagree.all():
+#         if disagree == request.user:
+#             disagree = True
+#             break
+
+#     if not disagree:
+#         setlist.disagree.add(request.user)
+
+#     if disagree:
+#         setlist.disagree.remove(request.user)
+
+#     return redirect(request.META['HTTP_REFERER'])
+
