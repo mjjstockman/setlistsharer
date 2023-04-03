@@ -258,11 +258,6 @@ Details on site testing can be found [here](TESTING.md).
 Active pages were not being highlighted properly in the nav.  This was due to the nav being part of a base template.  The following article helped: https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar
 
 
-## Remaining Bugs
-The hero div is not resizing on larger screens.
-
-[Back to top ⇧](#Setlist-Sharer)
-
 # Deployment
 
 ## GitHub
