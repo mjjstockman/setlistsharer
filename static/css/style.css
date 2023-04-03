@@ -40,13 +40,17 @@ nav, .navbar-brand {
     height: 250px;
 }
 
-#hero-text {
+/* #hero-text {
     background-color: rgba(188, 229, 253, 0.4);
     border-radius: 15px;
-}
+} */
 
 /* Gigs */
 .main-btn {
     border-width: 2px !important;
     border-radius: 5px;
+}
+
+nav, footer {
+    background: #C1A875;
 }
