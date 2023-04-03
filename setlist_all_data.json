@@ -1,0 +1,41 @@
+[
+{
+    "model": "setlist.venue",
+    "pk": 1,
+    "fields": {
+        "name": "RR",
+        "city": "Notts"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 1,
+    "fields": {
+        "title": "Song 1"
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 1,
+    "fields": {
+        "title": "Single 1",
+        "songs": [
+            1
+        ]
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 1,
+    "fields": {
+        "gig": 1,
+        "author": 1,
+        "status": 0,
+        "song": [
+            1
+        ],
+        "agree": [],
+        "disagree": []
+    }
+}
+]

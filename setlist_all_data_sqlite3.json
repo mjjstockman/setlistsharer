@@ -1,0 +1,378 @@
+[
+{
+    "model": "setlist.venue",
+    "pk": 5,
+    "fields": {
+        "name": "Rescue Rooms",
+        "city": "Nottingham"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 6,
+    "fields": {
+        "name": "Sidney",
+        "city": "Sheffield"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 7,
+    "fields": {
+        "name": "o2",
+        "city": "London"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 8,
+    "fields": {
+        "name": "Leadmill",
+        "city": "Sheffield"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 9,
+    "fields": {
+        "name": "Windmill",
+        "city": "London"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 10,
+    "fields": {
+        "name": "Barfly",
+        "city": "Liverpool"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 11,
+    "fields": {
+        "name": "Forum",
+        "city": "Birmingham"
+    }
+},
+{
+    "model": "setlist.venue",
+    "pk": 12,
+    "fields": {
+        "name": "Wardrobe",
+        "city": "Leeds"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 1,
+    "fields": {
+        "title": "Nice Man"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 2,
+    "fields": {
+        "title": "Romantic Gestures"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 3,
+    "fields": {
+        "title": "Exeter"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 4,
+    "fields": {
+        "title": "1049 Gotho"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 5,
+    "fields": {
+        "title": "Well Done"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 6,
+    "fields": {
+        "title": "Heel / Heal"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 7,
+    "fields": {
+        "title": "Television"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 8,
+    "fields": {
+        "title": "Anxiety"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 9,
+    "fields": {
+        "title": "Grounds"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 10,
+    "fields": {
+        "title": "Model Village"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 11,
+    "fields": {
+        "title": "War"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 12,
+    "fields": {
+        "title": "Meds"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 13,
+    "fields": {
+        "title": "A Hymn"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 14,
+    "fields": {
+        "title": "Great"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 15,
+    "fields": {
+        "title": "Danny"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 16,
+    "fields": {
+        "title": "June"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 17,
+    "fields": {
+        "title": "Samaritans"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 18,
+    "fields": {
+        "title": "Gram Rock"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 19,
+    "fields": {
+        "title": "Cry To Me"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 20,
+    "fields": {
+        "title": "Faith in the City"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 21,
+    "fields": {
+        "title": "Love Song"
+    }
+},
+{
+    "model": "setlist.song",
+    "pk": 22,
+    "fields": {
+        "title": "Mother"
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 1,
+    "fields": {
+        "title": "Mother",
+        "songs": [
+            16,
+            17,
+            22
+        ]
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 2,
+    "fields": {
+        "title": "Brutalism",
+        "songs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            12,
+            13,
+            15,
+            16
+        ]
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 3,
+    "fields": {
+        "title": "Meat EP",
+        "songs": [
+            1,
+            2,
+            6,
+            12,
+            14,
+            19
+        ]
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 4,
+    "fields": {
+        "title": "Grounds",
+        "songs": [
+            9,
+            12
+        ]
+    }
+},
+{
+    "model": "setlist.release",
+    "pk": 5,
+    "fields": {
+        "title": "Joy",
+        "songs": [
+            8,
+            10,
+            14,
+            18,
+            20,
+            21,
+            22
+        ]
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 11,
+    "fields": {
+        "gig": 5,
+        "author": 1,
+        "status": 2,
+        "song": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "agree": [
+            6
+        ],
+        "disagree": []
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 12,
+    "fields": {
+        "gig": 6,
+        "author": 1,
+        "status": 2,
+        "song": [
+            1,
+            2
+        ],
+        "agree": [
+            3
+        ],
+        "disagree": []
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 13,
+    "fields": {
+        "gig": 8,
+        "author": 1,
+        "status": 1,
+        "song": [
+            3
+        ],
+        "agree": [],
+        "disagree": []
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 14,
+    "fields": {
+        "gig": 9,
+        "author": 1,
+        "status": 0,
+        "song": [
+            1,
+            2,
+            3,
+            6
+        ],
+        "agree": [],
+        "disagree": []
+    }
+},
+{
+    "model": "setlist.setlist",
+    "pk": 15,
+    "fields": {
+        "gig": 10,
+        "author": 7,
+        "status": 0,
+        "song": [
+            7,
+            14,
+            19
+        ],
+        "agree": [],
+        "disagree": []
+    }
+}
+]
