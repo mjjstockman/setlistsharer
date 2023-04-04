@@ -257,6 +257,39 @@ Details on site testing can be found [here](TESTING.md).
 ## Bugs found throughout Development
 Active pages were not being highlighted properly in the nav.  This was due to the nav being part of a base template.  The following article helped: https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar
 
+## Random gig images
+Before deployment the homepage showed a random image from the static/images/random folder.
+The following function was used to select the random image:
+
+Adding 15 images named live<0 - 14>.jpg
+
+A variable for the random image number was created in the gigs function and
+passed within the context:
+
+```
+def gigs(request):
+    """Gets all gig objects from the database
+    creates a method to select a random number for gigs with no image
+    """
+    gigs = Gig.objects.all().order_by('date')
+    image_num = range(0, 14)
+    context = {
+        'gigs': gigs,
+        'image_num': image_num
+    }
+    return render(request, 'home/index.html', context)
+```
+
+This was then displayed in the template:
+
+```
+<img src="{% get_static_prefix %}images/random/live{{ image_num | random }}.jpg" class="img-fluid" alt="Random image of a gig">
+```
+
+This worked before images were hosted on Cloudinary. Because Cloudinary adds a random string to the end of the image file name
+this approach no longer worked.
+
+Due to time restrictions this bug was not fixed and the feature removed.
 
 # Deployment
 
