@@ -178,7 +178,7 @@ If the user is not logged in the navigation displys the following links for Home
 [Back to top ⇧](#Setlist-Sharer)
 ## Hero Image
 
-An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings.  This also holds some text that is centered.
+An eye-catching full screen image is placed under the navigation. This helps grab the users attention and convey positive, professional feelings. 
 
 <img src="docs/readme_images/features/hero-img.png"  alt="Nav at mobile size showing the hamburger icon">
 
