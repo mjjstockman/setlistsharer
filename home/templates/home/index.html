@@ -27,7 +27,7 @@
                     {% if gig.image_status == 2 %}
                     <img src="{{ gig.image.url }}" class="img-fluid w-100" alt="Photograph from {{ gig }}">            
                     {% else %}
-                    <p>No photos have been published yet!</p>
+                    <p class="text-center">A photo has not been published yet!</p>
                     {% endif %}
                 </div> 
 
@@ -50,11 +50,7 @@
                         {% if gig.image_status == 0 %}
                         <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
                             <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
-                        <!-- {% elif gig.image_status == 1 %}
-                            <div class="text-center">
-                                <i class="fa-solid fa-rotate pe-1"></i>Photo Waiting Confirmation 
-                            </div>
-                        {% endif %} -->
+                        {% endif %}
                     </div>
                 </div>
             </div>
