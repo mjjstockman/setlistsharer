@@ -34,7 +34,7 @@ nav, .navbar-brand {
 
 /* Hero */
 #hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/static/images/crowd.500e26999a99.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://res.cloudinary.com/mjjstockman/image/upload/v1680531671/static/images/crowd.500e26999a99.jpg');
     background-size: cover;
     background-position: center center;
     height: 250px;
