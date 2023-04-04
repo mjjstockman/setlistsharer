@@ -1,6 +1,6 @@
 # Setlist Sharer
 
-<img  src="docs/readme_images/multi-mockup.png"  alt="Mockup of the Setlist Sharer website on a phone, tablet, laptop and monitor screen">
+<img  src="docs/readme_images/multi-mockup.png"  alt="Mockup of the Setlist Sharer website on a phone, tablet, laptop and monitor screen sizes">
 
 *Image created and taken from [Am I Responsive?](ami.responsivedesign.is).*
 
