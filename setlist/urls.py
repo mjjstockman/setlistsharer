@@ -12,4 +12,3 @@ urlpatterns = [
     path('like/<str:pk>/', like, name='like'),
     path('add-image/<str:pk>/', add_image, name='add_image'),
 ]
-

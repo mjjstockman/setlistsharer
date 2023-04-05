@@ -17,5 +17,3 @@ def gigs(request):
         'image_num': image_num
     }
     return render(request, 'home/index.html', context)
-
-
