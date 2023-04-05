@@ -11,7 +11,7 @@
         <p>Hold down command and select the song title </p>
     </div>
 
-    <form action="" method="POST">
+    <form action="#" method="POST">
         {% csrf_token %}
         {{ form | crispy }}
         <button type="submit">Submit Setlist</button>
