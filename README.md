@@ -261,7 +261,7 @@ Active pages were not being highlighted properly in the nav.  This was due to th
 Before deployment the homepage showed a random image from the static/images/random folder.
 The following function was used to select the random image:
 
-Adding 15 images named live<0 - 14>.jpg
+Adding 15 images named "live<0 - 14>.jpg"
 
 A variable for the random image number was created in the gigs function and
 passed within the context:
