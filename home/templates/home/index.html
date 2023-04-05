@@ -2,60 +2,59 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="text-center bold">About</h1>
-        <hr>
-        <div class="text-center h2 m-2">
-            <p>Setlist Sharer is a site to help you share the songs that Idles played at a gig.</p>
-            <p>Help others see what was played at a certain gig and add to the community!</p>
-        </div>
-
-        <div>
-           <h1 class="text-center"><img src="{% static 'images/idles-logo.jpg' %}" class="col-4" id="band-logo" alt="Idles logo"></h1>
-        </div>
-        
-
-        <h1 class="text-center">Gigs</h1>
-        <hr> 
-        {% for gig in gigs %}
-            <div class="text-center m-2">
-                <h2>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</h2>
-            </div>
-            
-            <div class="row">
-                <div class="col-6">
-                    {% if gig.image_status == 2 %}
-                    <img src="{{ gig.image.url }}" class="img-fluid w-100" alt="Photograph from {{ gig }}">            
-                    {% else %}
-                    <p class="text-center">A photo has not been published yet!</p>
-                    {% endif %}
-                </div> 
-
-                <div class="col-6 d-flex align-content-center flex-wrap">
-                    <div class="row col-12">
-                        {% if gig.setlist_gig.status == 1 %}
-                        <div class="text-center">
-                            <i class="fa-solid fa-rotate pe-1"></i>Setlist Waiting Confirmation
-                        </div>
-                        {% elif gig.setlist_gig.status == 2 %}
-                        <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
-                            <i class="fa-solid fa-file pe-1"></i>View Setlist</a>
-                        {% else %}
-                        <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
-                            <i class="fa-solid fa-file-circle-plus pe-1"></i>Add Setlist</a>
-                        {% endif %}
-                    </div>
-
-                    <div class="row col-12">
-                        {% if gig.image_status == 0 %}
-                        <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
-                            <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
+<div class="container">
+    <h1 class="text-center bold">About</h1>
+    <hr>
+    <div class="text-center h2 m-2">
+        <p>Setlist Sharer is a site to help you share the songs that Idles played at a gig.</p>
+        <p>Help others see what was played at a certain gig and add to the community!</p>
     </div>
+
+    <div>
+        <h1 class="text-center"><img src="{% static 'images/idles-logo.jpg' %}" class="col-4" id="band-logo"
+                alt="Idles logo"></h1>
+    </div>
+
+
+    <h1 class="text-center">Gigs</h1>
+    <hr>
+    {% for gig in gigs %}
+    <div class="text-center m-2">
+        <h2>{{ gig.date }} at {{ gig.venue }} in {{ gig.venue.city }}</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            {% if gig.image_status == 2 %}
+            <img src="{{ gig.image.url }}" class="img-fluid w-100" alt="Photograph from {{ gig }}">
+            {% else %}
+            <p class="text-center">A photo has not been published yet!</p>
+            {% endif %}
+        </div>
+
+        <div class="col-6 d-flex align-content-center flex-wrap">
+            <div class="row col-12">
+                {% if gig.setlist_gig.status == 1 %}
+                <div class="text-center">
+                    <i class="fa-solid fa-rotate pe-1"></i>Setlist Waiting Confirmation
+                </div>
+                {% elif gig.setlist_gig.status == 2 %}
+                <a href="/setlist/detail/{{ gig.setlist_gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
+                    <i class="fa-solid fa-file pe-1"></i>View Setlist</a>
+                {% else %}
+                <a href="/setlist/add/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
+                    <i class="fa-solid fa-file-circle-plus pe-1"></i>Add Setlist</a>
+                {% endif %}
+            </div>
+
+            <div class="row col-12">
+                {% if gig.image_status == 0 %}
+                <a href="/add-image/{{ gig.id }}" class="btn btn-outline-dark mb-2 main-btn">
+                    <i class="fa-solid fa-camera pe-1"></i>Add Photo</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}
-
-
