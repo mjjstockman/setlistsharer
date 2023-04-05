@@ -22,6 +22,8 @@
             </span>
         </p>
     {% endfor %}
+    <hr>
+    <p>Liked by {{ setlist.agree.all.count }} user{{ setlist.agree.all.count|pluralize }}</p>
     {% if user.id == setlist.author.id %}
         <a href="{% url 'edit_setlist' setlist.id %}" class="btn btn-outline-dark mb-2 main-btn">
         <i class="fa-solid fa-file pe-1"></i>Edit Setlist</a>
@@ -42,6 +44,6 @@
             {% endif %}
         </form>
     {% endif %}
-        Liked by {{ setlist.agree.all.count }} user{{ setlist.agree.all.count|pluralize }}
+        
 </div>
 {% endblock %}
