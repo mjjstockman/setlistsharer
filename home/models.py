@@ -1,7 +1,6 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
-# Create your models here.
 STATUS = ((0, 'No Image'), (1, 'Waiting Confirmation'), (2, 'Published'))
 
 
